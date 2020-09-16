@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../services/login.service';
 import {Router} from '@angular/router';
 import {environment} from '../../../environments/environment';
+import { LoginModel } from '../models/mymodels'
 
 @Component({
   selector: 'app-login',
@@ -49,10 +50,5 @@ export class LoginComponent implements OnInit {
            }
        );
   }
-
 }
 
-class LoginModel {
-  username: string;
-  password: string;
-}

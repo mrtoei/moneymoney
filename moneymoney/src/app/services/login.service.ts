@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-
+import {LoginModel, UserResponse} from '../components/models/mymodels';
 
 
 @Injectable({
@@ -19,8 +19,8 @@ export class LoginService {
     return loginResult != null;
   }
 
-  login(values): Observable<any>{
-    return this.http.post<any>(`${this.hostUrl}/login`, values);
+  login(values: LoginModel): Observable<any>{
+    return this.http.post<UserResponse>(`${this.hostUrl}/login`, values);
   }
 
   logout(): Observable<any>{

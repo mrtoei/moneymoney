@@ -10,11 +10,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c338b2-1f30-4bf2-b091-c22a025ee4f3" name="Default Changelist" comment="" />
+    <list default="true" id="38c338b2-1f30-4bf2-b091-c22a025ee4f3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/components/models/mymodels.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/wellet.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/layout/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/layout/menu/menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/login.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -74,6 +96,9 @@
       <workItem from="1600086517812" duration="5923000" />
       <workItem from="1600093915569" duration="3970000" />
       <workItem from="1600098863816" duration="790000" />
+      <workItem from="1600125318223" duration="1874000" />
+      <workItem from="1600170484136" duration="5128000" />
+      <workItem from="1600261858987" duration="5490000" />
     </task>
     <task id="LOCAL-00001" summary="Account : Frontend, Account.API">
       <created>1599577225823</created>

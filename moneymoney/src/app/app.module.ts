@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { WelletHomeComponent } from './components/wellet/wellet-home/wellet-home.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HeaderComponent,
     MenuComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    WelletHomeComponent
   ],
   imports: [
     BrowserModule,
