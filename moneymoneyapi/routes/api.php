@@ -26,6 +26,10 @@ Route::get('login',function(){
 
 Route::group(['middleware' => 'auth:api'],function(){
     Route::post('/logout', 'Authentication@logout');
+
+    Route::group(['prefix'=>'/wellet'],function(){
+        Route::post('/create', 'Wellet@create');
+    });
 });
 
 

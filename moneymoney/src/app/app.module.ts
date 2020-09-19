@@ -11,6 +11,7 @@ import { MenuComponent } from './components/layout/menu/menu.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { WelletHomeComponent } from './components/wellet/wellet-home/wellet-home.component';
+import { WelletFormComponent } from './components/wellet/wellet-form/wellet-form.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { WelletHomeComponent } from './components/wellet/wellet-home/wellet-home
     MenuComponent,
     FooterComponent,
     DashboardComponent,
-    WelletHomeComponent
+    WelletHomeComponent,
+    WelletFormComponent
   ],
   imports: [
     BrowserModule,

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 07, 2020 at 09:03 PM
+-- Generation Time: Sep 19, 2020 at 06:15 PM
 -- Server version: 10.3.22-MariaDB-1ubuntu1
--- PHP Version: 7.4.9
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dev_account`
+-- Database: `dev_moneymoney`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +44,36 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2016_06_01_000002_create_oauth_access_tokens_table', 2),
 (4, '2016_06_01_000003_create_oauth_refresh_tokens_table', 2),
 (5, '2016_06_01_000004_create_oauth_clients_table', 2),
-(6, '2016_06_01_000005_create_oauth_personal_access_clients_table', 2);
+(6, '2016_06_01_000005_create_oauth_personal_access_clients_table', 2),
+(8, '2020_09_19_093528_create_my_wellet_table', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `my_wellet`
+--
+
+CREATE TABLE `my_wellet` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `my_wellet`
+--
+
+INSERT INTO `my_wellet` (`id`, `user_id`, `name`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 'fddfgsdfgsdfg', NULL, 0, '2020-09-19 10:07:59', '2020-09-19 10:07:59'),
+(2, 1, 'test 55555', NULL, 0, '2020-09-19 10:08:50', '2020-09-19 10:08:50'),
+(3, 1, 'test 55555', '1231123123', 0, '2020-09-19 10:09:00', '2020-09-19 10:09:00'),
+(4, 1, 'test 55555', '1231123123', 0, '2020-09-19 10:11:49', '2020-09-19 10:11:49'),
+(5, 1, 'test 55555', '1231123123', 0, '2020-09-19 10:14:50', '2020-09-19 10:14:50'),
+(6, 1, 'test 55555', '1231123123', 0, '2020-09-19 10:26:55', '2020-09-19 10:26:55');
 
 -- --------------------------------------------------------
 
@@ -63,6 +92,14 @@ CREATE TABLE `oauth_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `oauth_access_tokens`
+--
+
+INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('52db5afe075a4249906547c197244b4fd5b768d52494912341344b20a42b03e92be6eab8cad3e64b', 1, 1, 'admin', '[]', 0, '2020-09-15 03:16:27', '2020-09-15 03:16:27', '2020-09-16 03:16:28'),
+('8356b005c04be35ac5ee4de9fac2be8c74febab0fe6e20c16ebca6c2bbd47e01da5dd822bff95a80', 1, 1, 'admin', '[]', 0, '2020-09-15 03:24:32', '2020-09-15 03:24:32', '2020-09-16 03:24:32');
 
 -- --------------------------------------------------------
 
@@ -104,8 +141,8 @@ CREATE TABLE `oauth_clients` (
 --
 
 INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `provider`, `redirect`, `personal_access_client`, `password_client`, `revoked`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Account Personal Access Client', 'x4Uloi39OfIiqcPCyEbdWlIiGUwmdBI0ZzNJSWHI', NULL, 'http://localhost', 1, 0, 0, '2020-09-07 13:44:52', '2020-09-07 13:44:52'),
-(2, NULL, 'Account Password Grant Client', 'RrMJij0Mf7yXfxn6JhsnWqadbIrO3rmBSq1hOBZY', 'users', 'http://localhost', 0, 1, 0, '2020-09-07 13:44:52', '2020-09-07 13:44:52');
+(1, NULL, 'Moneymoney Personal Access Client', '3Qe0tVomsorpz6meEYfA08JaEV7l0x8pHX8Lyok2', NULL, 'http://localhost', 1, 0, 0, '2020-09-14 15:51:36', '2020-09-14 15:51:36'),
+(2, NULL, 'Moneymoney Password Grant Client', 'xC08FwHj3XKDALFKI2ckVk9TTo46BNgcqWzRPJrY', 'users', 'http://localhost', 0, 1, 0, '2020-09-14 15:51:36', '2020-09-14 15:51:36');
 
 -- --------------------------------------------------------
 
@@ -125,7 +162,7 @@ CREATE TABLE `oauth_personal_access_clients` (
 --
 
 INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `updated_at`) VALUES
-(1, 1, '2020-09-07 13:44:52', '2020-09-07 13:44:52');
+(1, 1, '2020-09-14 15:51:36', '2020-09-14 15:51:36');
 
 -- --------------------------------------------------------
 
@@ -177,6 +214,13 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `my_wellet`
+--
+ALTER TABLE `my_wellet`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `my_wellet_id_user_id_index` (`id`,`user_id`);
+
+--
 -- Indexes for table `oauth_access_tokens`
 --
 ALTER TABLE `oauth_access_tokens`
@@ -224,7 +268,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `my_wellet`
+--
+ALTER TABLE `my_wellet`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `oauth_clients`
