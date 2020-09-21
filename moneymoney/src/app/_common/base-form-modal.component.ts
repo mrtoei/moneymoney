@@ -1,9 +1,8 @@
-import {Directive, OnInit, Output, ViewChild} from '@angular/core';
+import {Directive, OnInit, Output, ViewChild, EventEmitter} from '@angular/core';
 import {NgForm} from '@angular/forms';
-declare let $: any;
+import { ModalDirective } from 'ngx-bootstrap/modal';
 
-class EventEmitter {
-}
+declare let $: any;
 
 @Directive()
 export abstract class BaseFormModalComponent implements OnInit
@@ -12,7 +11,12 @@ export abstract class BaseFormModalComponent implements OnInit
 
     row: any = {};
 
-    @ViewChild('popupForm') popupForm: NgForm;
+    @ViewChild('popupForm', {static: false}) popupForm: NgForm;
+
+    @ViewChild('formModal', {static: false}) formModal: ModalDirective;
+
+    @Output('afterSaved')
+    afterSaved = new EventEmitter();
 
     constructor(componentService: any) {
         this.componentService = componentService;
@@ -31,9 +35,10 @@ export abstract class BaseFormModalComponent implements OnInit
 
     // tslint:disable-next-line:typedef
     show(rowId: any){
-        $('#modal').modal('show');
         if (rowId){
             console.log('rowId');
+        }else{
+            this.formModal.show();
         }
     }
 
@@ -51,6 +56,10 @@ export abstract class BaseFormModalComponent implements OnInit
                 console.log(result);
             }
         );
+    }
+
+    cancel(){
+        this.formModal.hide();
     }
 
 }

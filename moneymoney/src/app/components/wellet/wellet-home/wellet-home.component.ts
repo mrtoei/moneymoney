@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 import {WelletFormComponent} from '../wellet-form/wellet-form.component';
 import {BaseListComponent} from '../../../_common/base-list.component';
 import {SearchModel} from '../../models/SearchModel';
+import {WelletService} from '../../../services/wellet.service';
 
 @Component({
   selector: 'app-wellet-home',
@@ -16,16 +17,18 @@ export class WelletHomeComponent extends BaseListComponent{
   @ViewChild(WelletFormComponent)
   public rowForm: WelletFormComponent;
 
-  constructor() {
+  constructor(
+      public componentService: WelletService
+  ) {
     super();
   }
 
   createSearchModel()
   {
-    console.log('createSearchModal');
-    console.log('find');
     this.searchModel = new SearchModel();
-    this.searchModel.filters = {};
+    this.searchModel.filters = {
+      name:''
+    };
   }
 
   onClickAddWellet(){

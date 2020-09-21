@@ -11,20 +11,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38c338b2-1f30-4bf2-b091-c22a025ee4f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/models/mymodels.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/services/wellet.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_common/base-form-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/base-form-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_common/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/base-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/layout/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/layout/menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/login.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/layout/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/layout/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/models/SearchModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/models/SearchModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/wellet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/wellet.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources/2f1450a9-9a78-47c2-83fa-7147f5cf2bb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources/2f1450a9-9a78-47c2-83fa-7147f5cf2bb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Wellet.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Wellet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +108,7 @@
       <workItem from="1600125318223" duration="1874000" />
       <workItem from="1600170484136" duration="5128000" />
       <workItem from="1600261858987" duration="5490000" />
+      <workItem from="1600690820612" duration="4877000" />
     </task>
     <task id="LOCAL-00001" summary="Account : Frontend, Account.API">
       <created>1599577225823</created>
@@ -128,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600099041508</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Moneymoney: Wellet Function">
+      <created>1600514355427</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600514355427</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,13 +167,18 @@
     <MESSAGE value="Account : Frontend, Account.API" />
     <MESSAGE value="FRONEND: layout" />
     <MESSAGE value="Rename Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename Project" />
+    <MESSAGE value="Moneymoney: Wellet Function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moneymoney: Wellet Function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="705" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600089490015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="705" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600089490015" />
+    <state x="750" y="222" key="RollbackChangesDialog" timestamp="1600514188685">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="750" y="222" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600514188685" />
     <state x="807" y="433" key="VCS.ChangelistChooser" timestamp="1599576079255">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -165,10 +187,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="846" y="434" key="VCS.EditChangelistDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599576030260" />
-    <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1599575804535">
+    <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600514255590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599575804535" />
+    <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600514255590" />
     <state x="667" y="119" width="966" height="801" key="find.popup" timestamp="1600091559941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

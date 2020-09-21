@@ -4,6 +4,8 @@ import {SearchModel} from '../components/models/SearchModel';
 @Directive()
 export abstract class BaseListComponent implements OnInit
 {
+    public componentService: any;
+
     headerTitle = 'Sample Title';
     public  rowForm: any;
 
@@ -17,6 +19,19 @@ export abstract class BaseListComponent implements OnInit
     ngOnInit()
     {
         this.createSearchModel();
+        this.find('search');
+    }
+    // tslint:disable-next-line:typedef
+    find(action?: any){
+        console.log(this.searchModel.toParams());
+        this.componentService.find(this.searchModel.toParams()).subscribe(
+            result => {
+                if (result.success){
+                    console.log(result.data);
+                    this.searchModel.updateResult(result.data);
+                }
+            }
+        );
     }
 
     // tslint:disable-next-line:typedef
@@ -30,8 +45,13 @@ export abstract class BaseListComponent implements OnInit
     }
 
     abstract createSearchModel();
-    afterSearch(action?:string)
+    afterSearch(action?: string)
     {
-        //TODO implement if needed
+
+    }
+
+    afterModalSaved(data: any)
+    {
+
     }
 }

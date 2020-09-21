@@ -5,6 +5,11 @@
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">Wellet</h1>
                 </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <button class="btn btn-primary" (click)="openFormModal()"><i class="fas fa-plus-circle"></i> wellet</button>
+                    </ol>
+                </div><!-- /.col -->
             </div>
         </div>
     </div>
@@ -20,14 +25,9 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <div>
-                                        <button class="btn btn-primary" (click)="openFormModal()"><i class="fas fa-plus-circle"></i> wellet</button>
-                                    </div>
-                                    <ul>
-                                        <li>wellet 1</li>
-                                        <li>wellet 2</li>
+                                    <ul *ngFor="let row of searchModel.rows">
+                                        <li>{{row.name}}</li>
                                     </ul>
-
                                 </div>
                                 <!--transactions -->
                                 <div class="col-md-9">
@@ -42,5 +42,5 @@
     </section>
     <!-- /.content -->
 
-    <app-wellet-form #rowForm ></app-wellet-form>
+    <app-wellet-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)" ></app-wellet-form>
 </div>

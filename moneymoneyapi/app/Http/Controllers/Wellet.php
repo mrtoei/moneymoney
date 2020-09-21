@@ -14,6 +14,16 @@ class Wellet extends Base
         $this->wellet = new welletModel();
     }
 
+    public function listing(Request $request)
+    {
+        $user = $request->user();
+        $result = $this->wellet::where([
+                                    ['user_id',$user->id],
+                                    ['status',0]
+                                ])->get();
+        return $this->success((object)['rows'=>$result]);
+    }
+
     public function create(Request $request)
     {
         $this->wellet->user_id = $request->user()->id;

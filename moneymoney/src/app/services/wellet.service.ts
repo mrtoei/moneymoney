@@ -22,6 +22,10 @@ export class WelletService {
     return httpHeaders;
   }
 
+  find(searchModel: any): Observable<any>{
+    return this.httpClient.post(`${this.hostUrl}/wellet/listing`, searchModel, {headers: this.headers()});
+  }
+
   // @ts-ignore
   create(model: any): Observable<any>{
     return this.httpClient.post(`${this.hostUrl}/wellet/create`, model, {headers: this.headers()});

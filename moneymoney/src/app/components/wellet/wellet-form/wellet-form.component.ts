@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { BaseFormModalComponent } from '../../../_common/base-form-modal.component';
 import { WelletService } from '../../../services/wellet.service';
 
+
 @Component({
   selector: 'app-wellet-form',
   templateUrl: './wellet-form.component.html',
   styleUrls: ['./wellet-form.component.scss'],
+  exportAs: 'formModalEX'
 })
 export class WelletFormComponent extends BaseFormModalComponent{
 
@@ -22,6 +24,14 @@ export class WelletFormComponent extends BaseFormModalComponent{
       name: '',
       description: ''
     };
+  }
 
+  show(rowId: any){
+    if(rowId){
+
+    }else {
+      this.initializeRow();
+      this.formModal.show();
+    }
   }
 }
