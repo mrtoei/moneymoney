@@ -1,8 +1,8 @@
 import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {WelletFormComponent} from '../wellet-form/wellet-form.component';
-import {BaseListComponent} from '../../../_common/base-list.component';
-import {SearchModel} from '../../models/SearchModel';
-import {WelletService} from '../../../services/wellet.service';
+import {WelletFormComponent} from '@components/wellet/wellet-form/wellet-form.component';
+import {BaseListComponent} from '@cComponents/base-list.component';
+import {SearchModel} from '@cModel//SearchModel';
+import {WelletService} from '@services/wellet.service';
 
 @Component({
   selector: 'app-wellet-home',

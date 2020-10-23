@@ -1,5 +1,5 @@
 import {Directive, OnInit} from '@angular/core';
-import {SearchModel} from '../components/models/SearchModel';
+import {SearchModel} from '@cModel/SearchModel';
 
 @Directive()
 export abstract class BaseListComponent implements OnInit

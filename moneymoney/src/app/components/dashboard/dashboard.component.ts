@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from '../../services/login.service';
+import {LoginService} from '@services/login.service';
 import {Router} from '@angular/router';
 
 
@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     if(!this.loginSerive.isLoggedIn()){
-      this.router.navigate(['login'])
+      this.router.navigate(['login']);
       // window.location.href= 'login'
     }
   }

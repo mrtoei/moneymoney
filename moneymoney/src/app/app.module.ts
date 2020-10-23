@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ButtonsModule  } from 'ngx-bootstrap/buttons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -14,7 +15,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { WelletHomeComponent } from './components/wellet/wellet-home/wellet-home.component';
 import { WelletFormComponent } from './components/wellet/wellet-form/wellet-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CategoryListComponent } from '@components/setting/category/categoryList.component';
+import { CategoryFormComponent } from '@components/setting/category/categoryForm.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     DashboardComponent,
     WelletHomeComponent,
-    WelletFormComponent
+    WelletFormComponent,
+    CategoryListComponent,
+    CategoryFormComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

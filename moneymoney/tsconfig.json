@@ -5,28 +5,48 @@
   To learn more about this file see: https://angular.io/config/solution-tsconfig.
 */
 {
+  "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./out-tsc/app",
     "sourceMap": true,
-    "declaration": false,
+    "declaration": true,
     "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es5",
     "module": "es2020",
+    "types": [],
     "lib": [
       "es2018",
       "dom"
     ],
-    "types": []
+    "paths": {
+      "@cModel/*": ["./src/app/_common/models/*"],
+      "@cComponents/*": ["./src/app/_common/components/*"],
+      "@env": ["./src/environments/environment.ts"],
+      "@components/*": ["./src/app/components/*"],
+      "@routers/*": ["./src/app/routers/*"],
+      "@services/*": ["./src/app/services/*"]
+    }
   },
-  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "preserveWhitespaces": false
+  },
   "files": [
     "src/main.ts",
     "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
+  "formatCodeOptions": {
+    "indentSize": 4,
+    "tabSize": 4
+  }
 }

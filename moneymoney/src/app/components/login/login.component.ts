@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from '../../services/login.service';
+import {LoginService} from '@services//login.service';
 import {Router} from '@angular/router';
-import {environment} from '../../../environments/environment';
-import { LoginModel } from '../models/mymodels'
+import {environment} from '@env';
+import { LoginModel } from '@cModel//mymodels';
 
 @Component({
   selector: 'app-login',
@@ -23,12 +23,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     if (!this.loginService.isLoggedIn()){
       this.router.navigate(['login']);
-        this.router.navigate(['login']);
+      this.router.navigate(['login']);
     }else{
         this.router.navigate(['dashboard']);
     }
   }
 
+    // tslint:disable-next-line:typedef
   onSumbit(){
       this.isError = false;
       this.loading = true;

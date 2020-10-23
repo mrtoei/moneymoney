@@ -5,6 +5,7 @@ import { ModalDirective } from 'ngx-bootstrap/modal';
 declare let $: any;
 
 @Directive()
+// tslint:disable-next-line:directive-class-suffix
 export abstract class BaseFormModalComponent implements OnInit
 {
     public componentService: any;
