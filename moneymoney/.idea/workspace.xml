@@ -11,56 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38c338b2-1f30-4bf2-b091-c22a025ee4f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/setting/category/category.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app-routing.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app-routing.module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/app/app.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/app/app.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/dashboard/dashboard.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/dashboard/dashboard.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/footer/footer.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/footer/footer.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/header/header.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/header/header.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/login/login.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/login/login.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/menu/menu.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/components/menu/menu.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/services/login.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/services/login.service.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/main.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/polyfills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-tsc/app/polyfills.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/_common/base-form-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/components/base-form-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/_common/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/components/base-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/layout/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/layout/menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/models/SearchModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/models/SearchModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/models/mymodels.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/models/mymodels.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_common/components/base-form-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/components/base-form-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_common/components/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/components/base-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/category.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/category.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/login.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/wellet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/wellet.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/account.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/account.api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +112,9 @@
       <workItem from="1600690820612" duration="5048000" />
       <workItem from="1603445942153" duration="195000" />
       <workItem from="1603446158589" duration="16806000" />
+      <workItem from="1603474905113" duration="124000" />
+      <workItem from="1603545467967" duration="10862000" />
+      <workItem from="1603557732677" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="Account : Frontend, Account.API">
       <created>1599577225823</created>
@@ -200,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603446299983</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Moneymoney: Setting/category">
+      <created>1603475013664</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603475013664</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +204,8 @@
     <MESSAGE value="Moneymoney: Wellet Function" />
     <MESSAGE value="Moneymoney: Wellet Component, Wellet Api" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="Moneymoney: Setting/category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moneymoney: Setting/category" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2268" y="431" key="#TSLint" timestamp="1603468097900">
@@ -244,9 +224,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603462450569" />
-    <state x="750" y="222" key="RollbackChangesDialog" timestamp="1600695751498">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2670" y="222" key="RollbackChangesDialog" timestamp="1603545605844">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2670" y="222" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603545605844" />
     <state x="750" y="222" key="RollbackChangesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600695751498" />
     <state x="807" y="433" key="VCS.ChangelistChooser" timestamp="1599576079255">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -256,17 +237,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="846" y="434" key="VCS.EditChangelistDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599576030260" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603446590855">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603475017440">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603446590855" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603475017440" />
     <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600514255590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600514255590" />
-    <state x="667" y="119" width="966" height="801" key="find.popup" timestamp="1600091559941">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2587" y="119" width="966" height="801" key="find.popup" timestamp="1603549942060">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2587" y="119" width="966" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603549942060" />
     <state x="667" y="119" width="966" height="801" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600091559941" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1599312709537">
       <screen x="0" y="0" width="1920" height="1040" />

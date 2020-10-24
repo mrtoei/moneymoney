@@ -1,11 +1,8 @@
 import {Directive, OnInit, Output, ViewChild, EventEmitter} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import { ModalDirective } from 'ngx-bootstrap/modal';
-
-declare let $: any;
+import { ModalDirective} from 'ngx-bootstrap/modal';
 
 @Directive()
-// tslint:disable-next-line:directive-class-suffix
 export abstract class BaseFormModalComponent implements OnInit
 {
     public componentService: any;
@@ -19,12 +16,13 @@ export abstract class BaseFormModalComponent implements OnInit
     @Output('afterSaved')
     afterSaved = new EventEmitter();
 
-    constructor(componentService: any) {
+    protected constructor(
+        componentService: any,
+    ) {
         this.componentService = componentService;
         this.initializeRow();
     }
 
-    // tslint:disable-next-line:typedef
     initializeRow()
     {
     }
@@ -34,8 +32,7 @@ export abstract class BaseFormModalComponent implements OnInit
 
     }
 
-    // tslint:disable-next-line:typedef
-    show(rowId: any){
+    show(rowId?: any){
         if (rowId){
             console.log('rowId');
         }else{
@@ -45,12 +42,12 @@ export abstract class BaseFormModalComponent implements OnInit
 
     save(){
         console.log(this.row);
-        const action = 'create';
+        // let action = 'create';
         let request;
         if (this.row.id === 0){
-
-        }else{
             request = this.componentService.create(this.row);
+        }else{
+            // action = 'update';
         }
         request.subscribe(
             result => {

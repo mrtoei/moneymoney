@@ -6,7 +6,7 @@
                     <h4>Categories</h4>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-sm"><i class="fas fa-plus fa-sm"></i> Category</button>
+                    <button class="btn btn-primary" (click)="openFormModal()"><i class="fas fa-plus-circle"></i> Category</button>
                 </div>
             </div>
         </div>
@@ -48,4 +48,9 @@
             </div>
         </div>
     </section>
+
+
 </div>
+
+<app-category-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-category-form>
+

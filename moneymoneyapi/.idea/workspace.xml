@@ -11,50 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95a67426-fb97-4aa4-8f81-2848073c3a10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../moneymoney/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/app-routing.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/app-routing.module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/app.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/app.module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/app/app.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/app/app.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/dashboard/dashboard.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/dashboard/dashboard.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/footer/footer.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/footer/footer.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/header/header.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/header/header.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/login/login.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/login/login.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/menu/menu.component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/components/menu/menu.component.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/services/login.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/app/services/login.service.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/environments/environment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/environments/environment.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/main.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/polyfills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/out-tsc/app/polyfills.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/_common/base-form-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-form-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/_common/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/layout/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/layout/menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/models/SearchModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/models/SearchModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/models/mymodels.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/models/mymodels.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-form-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-form-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/category.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/category.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryForm.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryForm.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryForm.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryForm.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryList.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryList.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/wellet-form/wellet-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/wellet-form/wellet-form.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/wellet-home/wellet-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/wellet-home/wellet-home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/services/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/services/login.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/services/wellet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/services/wellet.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/account.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/account.api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,120 +46,125 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
-      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
-      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/vendor/opis/closure" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
-      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
-      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
-      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
-      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
-      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
-      <path value="$PROJECT_DIR$/vendor/league/event" />
-      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
-      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
-      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
-      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
     </include_path>
   </component>
   <component name="ProjectId" id="1h6EugYhbYD8oNjjPd0ZeYBAqeL" />
@@ -232,7 +210,8 @@
       <workItem from="1600514286962" duration="47000" />
       <workItem from="1600690823609" duration="4098000" />
       <workItem from="1603459207129" duration="906000" />
-      <workItem from="1603460151066" duration="4152000" />
+      <workItem from="1603460151066" duration="4400000" />
+      <workItem from="1603545467918" duration="4347000" />
     </task>
     <task id="LOCAL-00001" summary="Account : Account.API">
       <created>1599577893095</created>

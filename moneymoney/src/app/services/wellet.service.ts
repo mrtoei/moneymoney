@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {environment} from '../../environments/environment';
+import {environment} from '@env';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,6 @@ export class WelletService {
     return this.httpClient.post(`${this.hostUrl}/wellet/listing`, searchModel, {headers: this.headers()});
   }
 
-  // @ts-ignore
   create(model: any): Observable<any>{
     return this.httpClient.post(`${this.hostUrl}/wellet/create`, model, {headers: this.headers()});
   }

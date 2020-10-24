@@ -1,29 +1,27 @@
-import {Directive, OnInit} from '@angular/core';
+import {Directive, OnInit, TemplateRef} from '@angular/core';
 import {SearchModel} from '@cModel/SearchModel';
 
 @Directive()
 export abstract class BaseListComponent implements OnInit
 {
     public componentService: any;
+    public  rowForm: any;
 
     headerTitle = 'Sample Title';
-    public  rowForm: any;
 
     searchModel: any = new SearchModel();
 
-    constructor() {
+    protected constructor() {
 
     }
 
-    // tslint:disable-next-line:typedef
     ngOnInit()
     {
         this.createSearchModel();
         this.find('search');
     }
-    // tslint:disable-next-line:typedef
+
     find(action?: any){
-        console.log(this.searchModel.toParams());
         this.componentService.find(this.searchModel.toParams()).subscribe(
             result => {
                 if (result.success){
@@ -34,13 +32,11 @@ export abstract class BaseListComponent implements OnInit
         );
     }
 
-    // tslint:disable-next-line:typedef
     openFormModal(row?: any){
-
         if (row && row.id){
 
         }else{
-            this.rowForm.show();
+            this.rowForm.show(null);
         }
     }
 

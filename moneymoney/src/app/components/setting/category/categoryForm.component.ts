@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { BaseListComponent } from '@cComponents/base-list.component';
+import { Component} from '@angular/core';
+import { BaseFormModalComponent } from '@cComponents/base-form-modal.component';
+import { CategoryService } from '@services/category.service';
 
 @Component({
   selector: 'app-category-form',
   templateUrl: './categoryForm.component.html',
-  styleUrls: ['./category.component.scss']
+  styleUrls: ['./category.component.scss'],
+  exportAs: 'formModalEX'
 })
-export class CategoryFormComponent extends BaseListComponent{
+export class CategoryFormComponent extends BaseFormModalComponent{
 
-  constructor() {
-    super();
+  constructor(public componentService: CategoryService) {
+    super(componentService);
   }
 
-  ngOnInit(){
-  }
-
-  createSearchModel() {
+  initializeRow()
+  {
+    this.row = {
+      id:0,
+      name:'',
+      description:''
+    }
   }
 
 }

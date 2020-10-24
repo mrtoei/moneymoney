@@ -31,6 +31,11 @@ Route::group(['middleware' => 'auth:api'],function(){
         Route::post('/listing', 'Wellet@listing');
         Route::post('/create', 'Wellet@create');
     });
+
+    Route::group(['prefix'=>'/category'],function(){
+        Route::post('/listing', 'Category@listing');
+        Route::post('/create', 'Category@create');
+    });
 });
 
 
