@@ -10,27 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c338b2-1f30-4bf2-b091-c22a025ee4f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/_common/components/base-form-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/components/base-form-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/_common/components/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/components/base-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/category.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/category.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryForm.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/wellet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/wellet.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/account.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/account.api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="38c338b2-1f30-4bf2-b091-c22a025ee4f3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +95,7 @@
       <workItem from="1603474905113" duration="124000" />
       <workItem from="1603545467967" duration="10862000" />
       <workItem from="1603557732677" duration="18000" />
+      <workItem from="1603558064211" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="Account : Frontend, Account.API">
       <created>1599577225823</created>
@@ -179,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603475013664</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Moneymoney: Setting/category, Moneymoneyapi: Category">
+      <created>1603558494577</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603558494577</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +193,8 @@
     <MESSAGE value="Moneymoney: Wellet Component, Wellet Api" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Moneymoney: Setting/category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moneymoney: Setting/category" />
+    <MESSAGE value="Moneymoney: Setting/category, Moneymoneyapi: Category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moneymoney: Setting/category, Moneymoneyapi: Category" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2268" y="431" key="#TSLint" timestamp="1603468097900">
@@ -237,11 +226,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="846" y="434" key="VCS.EditChangelistDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599576030260" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603475017440">
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603558499203">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603446590855" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603475017440" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603558499203" />
     <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600514255590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
