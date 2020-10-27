@@ -17,10 +17,20 @@ export class CategoryFormComponent extends BaseFormModalComponent{
   initializeRow()
   {
     this.row = {
-      id:0,
+      id: 0,
       name:'',
       description:''
     }
   }
+
+  show(rowId?: any){
+    if (rowId){
+      console.log('rowId');
+    }else{
+      this.row.parent_id = null;
+      this.formModal.show();
+    }
+  }
+
 
 }

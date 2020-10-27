@@ -27,6 +27,9 @@ export abstract class BaseListComponent implements OnInit
                 if (result.success){
                     console.log(result.data);
                     this.searchModel.updateResult(result.data);
+                    if(action === 'search') {
+                        this.afterSearch(action);
+                    }
                 }
             }
         );
@@ -48,6 +51,9 @@ export abstract class BaseListComponent implements OnInit
 
     afterModalSaved(data: any)
     {
+        if (data.action === 'create'){
+            this.searchModel.rows.unshift(data.row);
+        }
 
     }
 }

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Wellet as welletModel;
-use stdClass;
 
 class Wellet extends Base
 {

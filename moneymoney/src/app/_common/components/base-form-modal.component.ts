@@ -42,18 +42,24 @@ export abstract class BaseFormModalComponent implements OnInit
 
     save(){
         console.log(this.row);
-        // let action = 'create';
-        let request;
+        let action = 'create';
+        let request ;
         if (this.row.id === 0){
-            request = this.componentService.create(this.row);
+           request = this.componentService.create(this.row);
         }else{
             // action = 'update';
         }
-        request.subscribe(
-            result => {
-                console.log(result);
-            }
-        );
+
+        request.subscribe(result=>{
+           if(result.success){
+               this.afterSaved.emit({
+                   action: action,
+                   row: result.data
+               })
+               this.formModal.hide();
+           }
+        });
+
     }
 
     cancel(){

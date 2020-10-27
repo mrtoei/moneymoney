@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Moneymoney@202.183.198.6" uuid="2f1450a9-9a78-47c2-83fa-7147f5cf2bb2">
-      <database-info product="MySQL" version="5.5.5-10.3.22-MariaDB-1ubuntu1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MARIADB" exact-version="10.3.22" exact-driver-version="8.0">
+      <database-info product="MySQL" version="5.5.5-10.3.25-MariaDB-0ubuntu0.20.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MARIADB" exact-version="10.3.25" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
