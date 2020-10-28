@@ -18,22 +18,30 @@
                 <table class="table">
                     <thead class="thead-light">
                         <tr>
-                            <th scope="col">#</th>
                             <th scope="col">Category</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody *ngIf="searchModel.rows.length > 0">
                         <tr *ngFor="let row of searchModel.rows, let i = index">
-                            <th scope="row">{{i+1}}</th>
                             <td>{{row.name}}</td>
+                            <td>
+                                <div>
+                                    <button type="button" (click)="openFormModal(row)"><i class="fas fa-pen"></i></button>
+                                    <button type="button" (click)="remove(row)" ><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody *ngIf="searchModel.rows.length == 0">
+                        <tr>
+                            <td colspan="2">No Record . . .</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
-
-
 </div>
 
 <app-category-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-category-form>

@@ -1,6 +1,7 @@
 import {Directive, OnInit, Output, ViewChild, EventEmitter} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { ModalDirective} from 'ngx-bootstrap/modal';
+import Swal from "sweetalert2";
 
 @Directive()
 export abstract class BaseFormModalComponent implements OnInit
@@ -57,6 +58,13 @@ export abstract class BaseFormModalComponent implements OnInit
                    row: result.data
                })
                this.formModal.hide();
+               Swal.fire({
+                   position: 'top-end',
+                   icon: 'success',
+                   title: 'Record is saved!',
+                   showConfirmButton: false,
+                   timer: 2000
+               })
            }
         });
 

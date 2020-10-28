@@ -15,8 +15,10 @@ class Category extends Base
     public function listing()
     {
         $rows = $this->category::where([
-                    ['status', 0]
-                 ])->get();
+                    ['status', 0],
+                 ])
+                ->orderBy('id','asc')
+                ->get();
         return $this->success(['rows'=>$rows]);
     }
 
@@ -29,5 +31,11 @@ class Category extends Base
 
         $lastId = $this->category->id;
         return $this->success($this->category::find($lastId)) ;
+    }
+
+    public function remove($id)
+    {
+        $this->category::where('id',$id)->delete();
+        return $this->success();
     }
 }

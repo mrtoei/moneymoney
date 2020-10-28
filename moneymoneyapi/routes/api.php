@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth:api'],function(){
     Route::group(['prefix'=>'/category'],function(){
         Route::post('/listing', 'Category@listing');
         Route::post('/create', 'Category@create');
+        Route::get('/remove/{id}', 'Category@remove');
     });
 });
 

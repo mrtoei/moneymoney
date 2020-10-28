@@ -30,4 +30,9 @@ export class CategoryService {
     return this.httpClient.post(`${this.hostUrl}/category/create`, model, {headers: this.headers()});
   }
 
+  remove(id: any): Observable<any>{
+    return this.httpClient.get(`${this.hostUrl}/category/remove/${id}`, {headers: this.headers()});
+  }
+
+
 }

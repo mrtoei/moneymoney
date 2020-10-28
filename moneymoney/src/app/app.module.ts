@@ -38,7 +38,7 @@ import { CategoryFormComponent } from '@components/setting/category/categoryForm
     HttpClientModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
