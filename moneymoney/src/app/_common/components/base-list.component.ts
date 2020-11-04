@@ -12,6 +12,8 @@ export abstract class BaseListComponent implements OnInit
 
     searchModel: any = new SearchModel();
 
+    loading:boolean = false;
+
     protected constructor() {
 
     }
@@ -23,6 +25,7 @@ export abstract class BaseListComponent implements OnInit
     }
 
     find(action?: any){
+        this.loading = true;
         this.componentService.find(this.searchModel.toParams()).subscribe(
             result => {
                 if (result.success){
@@ -30,6 +33,7 @@ export abstract class BaseListComponent implements OnInit
                     if(action === 'search') {
                         this.afterSearch(action);
                     }
+                    this.loading = false;
                 }
             }
         );
@@ -37,23 +41,6 @@ export abstract class BaseListComponent implements OnInit
 
     remove(row)
     {
-        Swal.fire(
-            'The Internet?',
-            'That thing is still around?',
-            'question'
-        )
-        console.log(row);
-        // let confirm = window.confirm('Confirm to delete record?');
-        // if(confirm){
-        //     console.log(row);
-        //     this.componentService.remove(row.id).subscribe(result=>{
-        //         if(result.success){
-        //             this.find();
-        //             // this.toastr.success('Record is removed!');
-        //         }
-        //     });
-        // }
-
         Swal.fire({
             title: 'Confirm to delete record?',
             text: `Category name : ${row.name}`,
@@ -64,7 +51,6 @@ export abstract class BaseListComponent implements OnInit
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                console.log(row);
                 this.componentService.remove(row.id).subscribe(result=>{
                     if(result.success){
                         this.find();
@@ -79,12 +65,11 @@ export abstract class BaseListComponent implements OnInit
                 });
             }
         })
-
     }
 
     openFormModal(row?: any){
         if (row && row.id){
-
+            this.rowForm.show(row.id);
         }else{
             this.rowForm.show(null);
         }
@@ -101,6 +86,5 @@ export abstract class BaseListComponent implements OnInit
         if (data.action === 'create'){
             this.searchModel.rows.unshift(data.row);
         }
-
     }
 }

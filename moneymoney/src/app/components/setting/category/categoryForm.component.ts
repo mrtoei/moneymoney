@@ -23,13 +23,13 @@ export class CategoryFormComponent extends BaseFormModalComponent{
     }
   }
 
-  show(rowId?: any){
-    if (rowId){
-      console.log('rowId');
-    }else{
+  show(rowId?: any,parentId?: any){
+    if (parentId){
+      this.row.parent_id = parentId;
+    }else if(rowId == 0){
       this.row.parent_id = null;
-      this.formModal.show();
     }
+    this.formModal.show();
   }
 
 

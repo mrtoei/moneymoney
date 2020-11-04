@@ -1,3 +1,6 @@
+.w100{ width: 100px;}
+.c{ text-align: center;}
+
 xcontainer{
   width: 100%;
   max-width: 1170px;
@@ -26,4 +29,31 @@ header{
       color: #ffffff;
     }
   }
+}
+
+.div-btn-action{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+
+  button{
+    border-radius: 100%;
+    border: 1px solid transparent;
+    color: #797979!important;
+    background-color: #fff!important;
+    border-color: #e1e8ee!important;
+    outline: 0! important;
+  }
+
+  button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+  }
+
+  button:hover{
+    color: #797979!important;
+    background-color: #e1e8ee!important;
+    border-color: #e1e8ee!important;
+  }
+
 }

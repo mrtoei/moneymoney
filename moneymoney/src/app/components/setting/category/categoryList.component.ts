@@ -23,7 +23,16 @@ export class CategoryListComponent extends BaseListComponent{
   createSearchModel() {
     this.searchModel = new SearchModel();
     this.searchModel.filters = {
+    }
+  }
 
+  openFormModal(row?: any,parentId?: any){
+    if (row && row.id){
+      this.rowForm.show(row.id);
+    }else if (parentId){
+      this.rowForm.show(null,parentId);
+    }else{
+      this.rowForm.show();
     }
   }
 

@@ -19,21 +19,22 @@
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">Category</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" class="w100 c">Action</th>
                         </tr>
                     </thead>
-                    <tbody *ngIf="searchModel.rows.length > 0">
+                    <tbody *ngIf="searchModel.rows.length > 0 && !loading">
                         <tr *ngFor="let row of searchModel.rows, let i = index">
                             <td>{{row.name}}</td>
                             <td>
-                                <div>
+                                <div class="div-btn-action">
+                                    <button [disabled]="row.parent_id != null" type="button" (click)="openFormModal(null,row.id)"><i class="fas fa-plus"></i></button>
                                     <button type="button" (click)="openFormModal(row)"><i class="fas fa-pen"></i></button>
                                     <button type="button" (click)="remove(row)" ><i class="fas fa-trash"></i></button>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
-                    <tbody *ngIf="searchModel.rows.length == 0">
+                    <tbody *ngIf="searchModel.rows.length == 0 && !loading">
                         <tr>
                             <td colspan="2">No Record . . .</td>
                         </tr>
