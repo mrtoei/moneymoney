@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ButtonsModule  } from 'ngx-bootstrap/buttons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -39,6 +40,7 @@ import { CategoryFormComponent } from '@components/setting/category/categoryForm
     BrowserAnimationsModule,
     ModalModule.forRoot(),
     ButtonsModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

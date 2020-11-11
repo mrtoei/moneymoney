@@ -23,8 +23,8 @@
                         </tr>
                     </thead>
                     <tbody *ngIf="searchModel.rows.length > 0 && !loading">
-                        <tr *ngFor="let row of searchModel.rows, let i = index">
-                            <td>{{row.name}}</td>
+                        <tr *ngFor="let row of searchModel.rows">
+                            <td [ngClass]="row.parent_id != null ? 'pl-5':''">{{row.name}}</td>
                             <td>
                                 <div class="div-btn-action">
                                     <button [disabled]="row.parent_id != null" type="button" (click)="openFormModal(null,row.id)"><i class="fas fa-plus"></i></button>

@@ -11,6 +11,8 @@ import { CategoryService } from '@services/category.service';
 })
 export class CategoryListComponent extends BaseListComponent{
 
+  data:any =[];
+
   @ViewChild(CategoryFormComponent)
   public rowForm: CategoryFormComponent;
 

@@ -14,12 +14,29 @@ class Category extends Base
     }
     public function listing()
     {
+        $alist = [];
         $rows = $this->category::where([
                     ['status', 0],
                  ])
+                ->where('parent_id',NULL)
                 ->orderBy('id','asc')
                 ->get();
-        return $this->success(['rows'=>$rows]);
+        foreach ($rows as $row){
+            array_push($alist, $row);
+
+            $childRows= $this->parentLising($row->id);
+            foreach ($childRows as $child){
+                array_push($alist,$child);
+            }
+        }
+        return $this->success(['rows'=> $alist]);
+    }
+
+    private function parentLising($id){
+        return  $this->category::where([
+            ['parent_id',$id],
+            ['status',0]
+        ])->get();
     }
 
     public function create(Request $request)
@@ -27,6 +44,9 @@ class Category extends Base
         $this->category->user_id = $request->user()->id;
         $this->category->name = $request->json('name');
         $this->category->description = $request->json('description');
+        if(!empty($request->json('parent_id'))){
+            $this->category->parent_id = $request->json('parent_id');
+        }
         $this->category->save();
 
         $lastId = $this->category->id;

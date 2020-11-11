@@ -100,10 +100,12 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss",
-              "./node_modules/sweetalert2/src/sweetalert2.scss"
+              "./node_modules/sweetalert2/src/sweetalert2.scss",
+              "./node_modules/chart.js/dist/Chart.css"
             ],
             "scripts": [
-              "./node_modules/sweetalert2/src/sweetalert2.js"
+              "./node_modules/sweetalert2/src/sweetalert2.js",
+              "./node_modules/chart.js/dist/Chart.js"
             ]
           }
         },
