@@ -26,10 +26,13 @@ export class CategoryFormComponent extends BaseFormModalComponent{
   show(rowId?: any,parentId?: any){
     if (parentId){
       this.row.parent_id = parentId;
-    }else if(rowId == 0){
+      this.formModal.show();
+    }else if(rowId > 0){
+      this.loadRow(rowId);
+    }else{
       this.row.parent_id = null;
+      this.formModal.show();
     }
-    this.formModal.show();
   }
 
 

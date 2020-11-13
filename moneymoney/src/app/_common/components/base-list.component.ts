@@ -85,6 +85,18 @@ export abstract class BaseListComponent implements OnInit
     {
         if (data.action === 'create'){
             this.searchModel.rows.unshift(data.row);
+        }else{
+            let found = false;
+            for(let i = 0; i < this.searchModel.rows.length; i++){
+                if(data.row.id === this.searchModel.rows[i].id){
+                    this.searchModel.rows[i] = data.row;
+                    found = true;
+                    break;
+                }
+            }
+            if(!found){
+                this.searchModel.rows.unshift(data.row);
+            }
         }
     }
 }

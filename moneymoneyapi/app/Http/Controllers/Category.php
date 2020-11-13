@@ -32,6 +32,14 @@ class Category extends Base
         return $this->success(['rows'=> $alist]);
     }
 
+    public function read($id)
+    {
+        $row = $this->category::where([
+                    ['id',$id]
+                ])->first();
+        return $this->success($row);
+    }
+
     private function parentLising($id){
         return  $this->category::where([
             ['parent_id',$id],
@@ -51,6 +59,17 @@ class Category extends Base
 
         $lastId = $this->category->id;
         return $this->success($this->category::find($lastId)) ;
+    }
+
+    public function update(Request $request)
+    {
+        $id = $request->json('id');
+        $this->category::where('id',$id)
+                        ->update([
+                            'name'=>$request->json('name'),
+                            'description'=>$request->json('description')
+                        ]);
+        return $this->read($id);
     }
 
     public function remove($id)

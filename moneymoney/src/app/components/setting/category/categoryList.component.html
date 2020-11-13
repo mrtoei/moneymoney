@@ -27,7 +27,7 @@
                             <td [ngClass]="row.parent_id != null ? 'pl-5':''">{{row.name}}</td>
                             <td>
                                 <div class="div-btn-action">
-                                    <button [disabled]="row.parent_id != null" type="button" (click)="openFormModal(null,row.id)"><i class="fas fa-plus"></i></button>
+                                    <button *ngIf="row.parent_id == null"  type="button" (click)="openFormModal(null,row.id)"><i class="fas fa-plus"></i></button>
                                     <button type="button" (click)="openFormModal(row)"><i class="fas fa-pen"></i></button>
                                     <button type="button" (click)="remove(row)" ><i class="fas fa-trash"></i></button>
                                 </div>

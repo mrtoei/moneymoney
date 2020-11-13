@@ -35,22 +35,22 @@ export abstract class BaseFormModalComponent implements OnInit
 
     show(rowId?: any){
         if (rowId){
-            console.log('rowId');
+            this.loadRow(rowId)
         }else{
+            this.initializeRow();
             this.formModal.show();
         }
     }
 
     save(){
-        console.log(this.row);
         let action = 'create';
         let request ;
         if (this.row.id === 0){
            request = this.componentService.create(this.row);
         }else{
-            // action = 'update';
+            action = 'update';
+            request = this.componentService.update(this.row);
         }
-
         request.subscribe(result=>{
            if(result.success){
                this.afterSaved.emit({
@@ -67,7 +67,16 @@ export abstract class BaseFormModalComponent implements OnInit
                })
            }
         });
+    }
 
+    loadRow(rowId: any)
+    {
+        this.componentService.read(rowId).subscribe(result => {
+            if(result.success){
+                this.row = result.data;
+                this.formModal.show();
+            }
+        });
     }
 
     cancel(){

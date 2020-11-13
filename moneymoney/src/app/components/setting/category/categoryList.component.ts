@@ -25,6 +25,9 @@ export class CategoryListComponent extends BaseListComponent{
   createSearchModel() {
     this.searchModel = new SearchModel();
     this.searchModel.filters = {
+      id: '',
+      name:'',
+      description:''
     }
   }
 

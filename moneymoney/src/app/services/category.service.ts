@@ -26,8 +26,16 @@ export class CategoryService {
     return this.httpClient.post(`${this.hostUrl}/category/listing`, searchModel, {headers: this.headers()});
   }
 
+  read(id:any): Observable<any>{
+    return this.httpClient.get(`${this.hostUrl}/category/read/${id}`, {headers: this.headers()});
+  }
+
   create(model: any): Observable<any>{
     return this.httpClient.post(`${this.hostUrl}/category/create`, model, {headers: this.headers()});
+  }
+
+  update(model: any): Observable<any>{
+    return this.httpClient.post(`${this.hostUrl}/category/update`, model, {headers: this.headers()});
   }
 
   remove(id: any): Observable<any>{
