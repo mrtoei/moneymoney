@@ -13,8 +13,8 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { MenuComponent } from './components/layout/menu/menu.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { WelletHomeComponent } from './components/wellet/wellet-home/wellet-home.component';
-import { WelletFormComponent } from './components/wellet/wellet-form/wellet-form.component';
+import { WelletListComponent } from '@components/wellet/welletList.component';
+import { WelletFormComponent } from '@components/wellet/welletForm.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryListComponent } from '@components/setting/category/categoryList.component';
 import { CategoryFormComponent } from '@components/setting/category/categoryForm.component';
@@ -27,7 +27,7 @@ import { CategoryFormComponent } from '@components/setting/category/categoryForm
     MenuComponent,
     FooterComponent,
     DashboardComponent,
-    WelletHomeComponent,
+    WelletListComponent,
     WelletFormComponent,
     CategoryListComponent,
     CategoryFormComponent

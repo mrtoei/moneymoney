@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { BaseFormModalComponent } from '@cComponents/base-form-modal.component';
-import { WelletService } from '@services/wellet.service';
+import { BaseFormModalComponent } from '../../_common/components/base-form-modal.component';
+import { WelletService } from '../../services/wellet.service';
 
 @Component({
   selector: 'app-wellet-form',
-  templateUrl: './wellet-form.component.html',
-  styleUrls: ['./wellet-form.component.scss'],
+  templateUrl: './welletForm.html',
+  styleUrls: ['./wellet.scss'],
   exportAs: 'formModalEX'
 })
 export class WelletFormComponent extends BaseFormModalComponent{
@@ -17,6 +17,7 @@ export class WelletFormComponent extends BaseFormModalComponent{
   initializeRow()
   {
     this.row = {
+      id: 0,
       name: '',
       description: ''
     };

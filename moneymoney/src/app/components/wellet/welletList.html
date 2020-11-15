@@ -1,0 +1,29 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 wellet-header">
+                    <label>My Wellets</label>
+                    <span (click)="openFormModal()"><i class="fas fa-plus-circle" ></i></span>
+                </div>
+                <div class="col-md-10 wellet-header-detail">
+                    Detail
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 wellet-content">
+                    <div class="card" *ngFor="let row of searchModel.rows">
+                        <div class="card-body">
+                            <p class="card-text">{{row.name}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <app-wellet-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)" ></app-wellet-form>
+</div>
