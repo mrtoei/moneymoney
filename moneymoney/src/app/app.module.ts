@@ -7,14 +7,16 @@ import { ButtonsModule  } from 'ngx-bootstrap/buttons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './components/app/app.component';
-import { LoginComponent } from './components/login/login.component';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { MenuComponent } from './components/layout/menu/menu.component';
-import { FooterComponent } from './components/layout/footer/footer.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AppComponent } from '@components/app/app.component';
+import { LoginComponent } from '@components/login/login.component';
+import { HeaderComponent } from '@components/layout/header/header.component';
+import { MenuComponent } from '@components/layout/menu/menu.component';
+import { FooterComponent } from '@components/layout/footer/footer.component';
+import { DashboardComponent } from '@components/dashboard/dashboard.component';
 import { WelletListComponent } from '@components/wellet/welletList.component';
 import { WelletFormComponent } from '@components/wellet/welletForm.component';
+import {TransactionListComponent} from '@components/wellet/transation/transactionList.component';
+import {TransactionFormComponent} from '@components/wellet/transation/transactionForm.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryListComponent } from '@components/setting/category/categoryList.component';
 import { CategoryFormComponent } from '@components/setting/category/categoryForm.component';
@@ -29,6 +31,8 @@ import { CategoryFormComponent } from '@components/setting/category/categoryForm
     DashboardComponent,
     WelletListComponent,
     WelletFormComponent,
+    TransactionListComponent,
+    TransactionFormComponent,
     CategoryListComponent,
     CategoryFormComponent
   ],

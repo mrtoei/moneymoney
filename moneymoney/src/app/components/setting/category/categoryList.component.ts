@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {ChangeDetectorRef, Component, ViewChild} from '@angular/core';
 import { BaseListComponent } from '@cComponents/base-list.component';
 import { SearchModel } from '@cModel/SearchModel';
 import { CategoryFormComponent } from '@components/setting/category/categoryForm.component';
@@ -17,7 +17,7 @@ export class CategoryListComponent extends BaseListComponent{
   public rowForm: CategoryFormComponent;
 
   constructor(
-      public componentService: CategoryService
+      public componentService: CategoryService,
   ) {
     super()
   }

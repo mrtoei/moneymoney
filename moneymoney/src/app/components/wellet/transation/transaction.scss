@@ -1,0 +1,16 @@
+
+.wellet{
+  .card{
+    .card-body{
+      display: flex;
+      flex-direction: row;
+      .my-wellet-icon{
+        margin-right: 2rem;
+        img{
+          width: 80px;
+        }
+      }
+    }
+  }
+
+}

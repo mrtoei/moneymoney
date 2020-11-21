@@ -1,0 +1,54 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 header">
+                    <label>Transaction</label>
+                    <div>
+                        <span (click)="openFormModal()"><i class="fas fa-plus-circle" ></i></span>
+                        <span [routerLink]="['/wellet/']"><i class="fas fa-reply"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 wellet">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="my-wellet-icon">
+                                <img src="assets/images/flaticon/wallet.png">
+                            </div>
+                            <div class="my-wellet-detail">
+                                <h4 class="card-text">{{welletName}}</h4>
+                                <div>
+                                    <label>Inflow</label>
+                                    <span>500000</span>
+                                </div>
+                                <div>
+                                    <label>Outflow</label>
+                                    <span>300000</span>
+                                </div>
+                                <div>
+                                    <label></label>
+                                    <span>3000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 transaction">
+                    <div class="card">
+                        <div class="card-body">
+                            <span *ngIf="loading">Loading . . .</span>
+                            <span *ngIf="!loading && transactionList.length === 0">No Record . . .</span>
+                            <div  *ngIf="!loading && transactionList.length > 0">
+                                Data
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <app-transaction-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-transaction-form>
+</div>

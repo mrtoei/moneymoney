@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Wellet as welletModel;
 
-class Wellet extends Base
+class Wellet extends BaseController
 {
     protected $wellet;
     public function __construct()
@@ -21,6 +21,14 @@ class Wellet extends Base
                                     ['status',0]
                                 ])->get();
         return $this->success((object)['rows'=>$result]);
+    }
+
+    public function read($id)
+    {
+        $row = $this->wellet::where([
+            ['id',$id]
+        ])->first();
+        return $this->success($row);
     }
 
     public function create(Request $request)

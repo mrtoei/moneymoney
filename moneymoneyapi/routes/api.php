@@ -27,7 +27,14 @@ Route::group(['middleware' => 'auth:api'],function(){
 
     Route::group(['prefix'=>'/wellet'],function(){
         Route::post('/listing', 'Wellet@listing');
+        Route::get('/read/{id}', 'Wellet@read');
         Route::post('/create', 'Wellet@create');
+    });
+
+    Route::group(['prefix'=>'/transaction'],function(){
+        Route::post('/listing', 'transaction@listing');
+//        Route::get('/read/{id}', 'Wellet@read');
+//        Route::post('/create', 'Wellet@create');
     });
 
     Route::group(['prefix'=>'/category'],function(){

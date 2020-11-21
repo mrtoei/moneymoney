@@ -26,6 +26,8 @@
     "paths": {
       "@cModel/*": ["./src/app/_common/models/*"],
       "@cComponents/*": ["./src/app/_common/components/*"],
+      "@cUtil/*": ["./src/app/_common/util/*"],
+      "@cxFunc": ["./src/app/_common/util/xfunction"],
       "@env": ["./src/environments/environment.ts"],
       "@components/*": ["./src/app/components/*"],
       "@routers/*": ["./src/app/routers/*"],

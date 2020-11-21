@@ -1,4 +1,4 @@
-import {Directive, OnInit, TemplateRef} from '@angular/core';
+import {Directive, OnInit} from '@angular/core';
 import {SearchModel} from '@cModel/SearchModel';
 import Swal from 'sweetalert2';
 
@@ -14,8 +14,9 @@ export abstract class BaseListComponent implements OnInit
 
     loading:boolean = false;
 
-    protected constructor() {
 
+    constructor()
+    {
     }
 
     ngOnInit()

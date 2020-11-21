@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Base extends Controller
+class BaseController extends Controller
 {
     public function __construct()
     {

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Category as categoryModel;
 use Illuminate\Http\Request;
 
-class Category extends Base
+class Category extends BaseController
 {
     protected $category;
 

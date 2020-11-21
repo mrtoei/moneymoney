@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\BaseModal;
-
 class Category extends BaseModal
 {
     protected $table='categories';

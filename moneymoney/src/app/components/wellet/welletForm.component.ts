@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { BaseFormModalComponent } from '../../_common/components/base-form-modal.component';
-import { WelletService } from '../../services/wellet.service';
+import { BaseFormModalComponent } from '@cComponents/base-form-modal.component';
+import { WelletService } from '@services/wellet.service';
 
 @Component({
   selector: 'app-wellet-form',

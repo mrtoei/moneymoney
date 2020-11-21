@@ -6,7 +6,7 @@ import {environment} from '@env';
 @Injectable({
   providedIn: 'root'
 })
-export class WelletService {
+export class TransactionService {
   private hostUrl = environment.webapi;
 
   constructor(
@@ -22,16 +22,16 @@ export class WelletService {
     return httpHeaders;
   }
 
-  find(searchModel: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/wellet/listing`, searchModel, {headers: this.headers()});
+  lising(id: any): Observable<any>{
+    return this.httpClient.post(`${this.hostUrl}/transaction/listing`, id, {headers: this.headers()});
   }
 
   create(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/wellet/create`, model, {headers: this.headers()});
+    return this.httpClient.post(`${this.hostUrl}/transaction/create`, model, {headers: this.headers()});
   }
 
   read(id:any): Observable<any>{
-    return this.httpClient.get(`${this.hostUrl}/wellet/read/${id}`, {headers: this.headers()});
+    return this.httpClient.get(`${this.hostUrl}/transaction/read/${id}`, {headers: this.headers()});
   }
 
 }

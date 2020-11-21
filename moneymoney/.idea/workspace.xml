@@ -11,20 +11,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38c338b2-1f30-4bf2-b091-c22a025ee4f3" name="Default Changelist" comment="Moneymoney: Category">
+      <change afterPath="$PROJECT_DIR$/src/app/_common/components/base.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/_common/util/xfunction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/transation/transaction.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/transation/transactionForm.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/transation/transactionForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/transation/transactionList.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/wellet/transation/transactionList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/transaction.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/.env.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Transaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Models/Transaction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../moneymoneyapi/database/migrations/2020_11_21_141220_create_transactions_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EER Diagram/account-0.1.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../EER Diagram/account-0.1.mwb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_common/components/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_common/components/base-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/welletForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-form/wellet-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/welletForm.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/welletList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet-home/wellet-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/welletList.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/setting/category/categoryList.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/wellet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/wellet.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/welletForm.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/welletForm.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/welletList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/welletList.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/wellet/welletList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/wellet/welletList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/wellet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/wellet.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources/2f1450a9-9a78-47c2-83fa-7147f5cf2bb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/dataSources/2f1450a9-9a78-47c2-83fa-7147f5cf2bb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Wellet.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Http/Controllers/Wellet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoneyapi/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +54,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -51,7 +71,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/components/wellet/transation" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -61,16 +81,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src" />
-      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\services" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\components\wellet\transation" />
+      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\_common" />
       <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\components\wellet" />
       <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\components\setting\category" />
-      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\_common" />
       <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\_common\components" />
-      <recent name="E:\My Project\Angular\account_v3\frontend\src\app\components\layout" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\components\wellet\transation" />
+      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\services" />
+      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\_common\components" />
+      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src\app\components\wellet\detail" />
+      <recent name="D:\My Project\Angular\moneymoney_project\moneymoney\src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -129,6 +152,7 @@
       <workItem from="1605099765767" duration="7705000" />
       <workItem from="1605275376083" duration="8221000" />
       <workItem from="1605427248273" duration="5202000" />
+      <workItem from="1605927268071" duration="21095000" />
     </task>
     <task id="LOCAL-00001" summary="Account : Frontend, Account.API">
       <created>1599577225823</created>
@@ -299,22 +323,28 @@
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603446590855" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605285876661" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605947310565">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605947310565" />
     <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1600514255590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600514255590" />
-    <state x="2587" y="119" width="966" height="801" key="find.popup" timestamp="1603893720173">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="667" y="119" width="966" height="801" key="find.popup" timestamp="1605947441824">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="667" y="119" width="966" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605947441824" />
     <state x="2587" y="119" width="966" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603893720173" />
     <state x="667" y="119" width="966" height="801" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600091559941" />
     <state x="3020" y="240" key="run.anything.popup" timestamp="1604671016670">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="3020" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604671016670" />
-    <state x="623" y="225" key="search.everywhere.popup" timestamp="1599312709537">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605932949508">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1605932949508" />
     <state x="623" y="225" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599312709537" />
   </component>
 </project>

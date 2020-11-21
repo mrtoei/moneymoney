@@ -1,29 +1,49 @@
 <div class="content-wrapper">
-    <section class="content">
+    <section class="content wellet">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2 wellet-header">
+                <div class="col-md-12 wellet-header">
                     <label>My Wellets</label>
                     <span (click)="openFormModal()"><i class="fas fa-plus-circle" ></i></span>
                 </div>
-                <div class="col-md-10 wellet-header-detail">
-                    Detail
-                </div>
             </div>
             <div class="row">
-                <div class="col-md-2 wellet-content">
+                <div class="col-md-12 wellet-list" *ngIf="loading">
+                    Loading . . .
+                </div>
+                <div class="col-md-12 wellet-list" *ngIf="!loading && searchModel.rows.length === 0">
+                    No Record . . .
+                </div>
+                <div class="col-md-12 wellet-list" *ngIf="!loading && searchModel.rows.length > 0">
                     <div class="card" *ngFor="let row of searchModel.rows">
                         <div class="card-body">
-                            <p class="card-text">{{row.name}}</p>
+                            <div class="my-wellet-icon">
+                                <img src="assets/images/flaticon/wallet.png">
+                            </div>
+                            <div class="my-wellet-detail">
+                                <h4 class="card-text">{{row.name}}</h4>
+                                <div>
+                                    <label>Inflow</label>
+                                    <span>500000</span>
+                                </div>
+                                <div>
+                                    <label>Outflow</label>
+                                    <span>300000</span>
+                                </div>
+                                <div>
+                                    <label></label>
+                                    <span>3000</span>
+                                </div>
+                                <div>
+                                    <button class="btn btn-info btn-sm" [routerLink]="['/wellet/transaction/', row.id]">Detail</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-10">
-
                 </div>
             </div>
         </div>
     </section>
 
-    <app-wellet-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)" ></app-wellet-form>
+    <app-wellet-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-wellet-form>
 </div>

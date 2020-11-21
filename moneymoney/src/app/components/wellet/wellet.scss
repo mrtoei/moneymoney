@@ -1,26 +1,48 @@
 $green: #2eb494;
-
-.wellet-header{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  background: $green;
-  color: #ffffff;
-  label{
-    margin-bottom: 0;
-    font-weight: bold;
-    font-size: 16px;
+.wellet{
+  .wellet-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: $green;
+    color: #ffffff;
+    label{
+      margin-bottom: 0;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    span{
+      margin-left: 1rem;
+      cursor: pointer;
+      &:hover{
+        opacity: 0.5;
+        background: $green;
+      }
+    }
   }
-  span{
-    cursor: pointer;
-    &:hover{
-      opacity: 0.5;
-      background: $green;
+  .wellet-list{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    .card{
+      margin-right: 1rem;
+      idth: 250px;
+      .card-body{
+        display: flex;
+        flex-direction: row;
+        .my-wellet-icon{
+          margin-right: 1rem;
+          img{
+            width: 80px;
+          }
+        }
+      }
     }
   }
 }
+
 
 
 .wellet-header-detail{
@@ -29,9 +51,7 @@ $green: #2eb494;
   padding: 0.5rem;
 }
 .wellet-content {
-
   .card{
-
     margin-top: 0.5rem;
     margin-bottom: 0.5rem !important;
   }
