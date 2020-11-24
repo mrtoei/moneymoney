@@ -11,6 +11,7 @@ import {WelletService} from '@services/wellet.service';
 })
 export class TransactionFormComponent extends BaseFormModalComponent{
 
+
   constructor(public componentService: WelletService) {
     super(componentService );
   }
@@ -28,4 +29,7 @@ export class TransactionFormComponent extends BaseFormModalComponent{
     console.log('xxxxxx');
   }
 
+  save() {
+    console.log(this.row);
+  }
 }

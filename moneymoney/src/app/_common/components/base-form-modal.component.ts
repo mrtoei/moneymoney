@@ -30,7 +30,6 @@ export abstract class BaseFormModalComponent implements OnInit
 
     ngOnInit()
     {
-
     }
 
     show(rowId?: any){

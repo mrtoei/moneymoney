@@ -11,38 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95a67426-fb97-4aa4-8f81-2848073c3a10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/util/xfunction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transaction.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionForm.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionList.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../moneymoney/src/app/services/transaction.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Transaction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Transaction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_21_141220_create_transactions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EER Diagram/account-0.1.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../EER Diagram/account-0.1.mwb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../moneymoney/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/setting/category/categoryList.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/wellet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/wellet.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/welletForm.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/welletForm.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/welletList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/welletList.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/welletList.html" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/welletList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/services/wellet.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/services/wellet.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../moneymoney/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2f1450a9-9a78-47c2-83fa-7147f5cf2bb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2f1450a9-9a78-47c2-83fa-7147f5cf2bb2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-form-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/_common/components/base-form-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionForm.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionForm.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../moneymoney/src/app/components/wellet/transation/transactionForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Wellet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Wellet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,6 +229,7 @@
       <workItem from="1605789395969" duration="1918000" />
       <workItem from="1605794426347" duration="1095000" />
       <workItem from="1605927427556" duration="11099000" />
+      <workItem from="1606224426740" duration="2317000" />
     </task>
     <task id="LOCAL-00001" summary="Account : Account.API">
       <created>1599577893095</created>
