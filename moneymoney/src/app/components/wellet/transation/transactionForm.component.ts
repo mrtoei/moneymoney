@@ -11,6 +11,11 @@ import {WelletService} from '@services/wellet.service';
 })
 export class TransactionFormComponent extends BaseFormModalComponent{
 
+  bsValue = new Date();
+  bsConfig = {
+    dateInputFormat: 'YYYY-MM-DD',
+    selectFromOtherMonth: true
+  }
 
   constructor(public componentService: WelletService) {
     super(componentService );
@@ -20,13 +25,17 @@ export class TransactionFormComponent extends BaseFormModalComponent{
   {
     this.row = {
       id: 0,
+      type:'',
+      date: '',
       note: '',
+      category:'',
+      amount:'',
       description: ''
     };
   }
 
-  showDetail(){
-    console.log('xxxxxx');
+  dateChange(){
+    console.log(this.row.date);
   }
 
   save() {

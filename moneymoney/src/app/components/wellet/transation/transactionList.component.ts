@@ -14,6 +14,16 @@ export class TransactionListComponent extends BaseListComponent{
 
     welletName: any;
     transactionList:any = [];
+    row: any = {};
+
+    isList = true;
+    isForm = false;
+
+    bsValue = new Date();
+    bsConfig = {
+        dateInputFormat: 'YYYY-MM-DD',
+        selectFromOtherMonth: true
+    }
 
     @ViewChild(TransactionFormComponent)
     public rowForm: TransactionFormComponent;
@@ -22,6 +32,7 @@ export class TransactionListComponent extends BaseListComponent{
         public componentService: WelletService,
         private TransactionService: TransactionService,
         private activatedRoute: ActivatedRoute,
+        private cdr : ChangeDetectorRef
     ) {
         super();
     }
@@ -61,6 +72,22 @@ export class TransactionListComponent extends BaseListComponent{
                 this.loading = false;
             }
         )
+    }
+
+    openForm(){
+        this.isList = false;
+        this.isForm = true;
+        this.cdr.detectChanges();
+    }
+
+    dateChange(){
+        console.log(this.row.date);
+    }
+
+    backTolist(){
+        this.isList = true;
+        this.isForm = false;
+        this.cdr.detectChanges();
     }
 
 }

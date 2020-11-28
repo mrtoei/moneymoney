@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ButtonsModule  } from 'ngx-bootstrap/buttons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from '@components/app/app.component';
@@ -20,6 +21,7 @@ import {TransactionFormComponent} from '@components/wellet/transation/transactio
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryListComponent } from '@components/setting/category/categoryList.component';
 import { CategoryFormComponent } from '@components/setting/category/categoryForm.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { CategoryFormComponent } from '@components/setting/category/categoryForm
     BrowserAnimationsModule,
     ModalModule.forRoot(),
     ButtonsModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
