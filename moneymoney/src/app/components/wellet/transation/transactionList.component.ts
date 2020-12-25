@@ -74,14 +74,14 @@ export class TransactionListComponent extends BaseListComponent{
         )
     }
 
-    openForm(){
+    openTransactionPanel(){
         this.isList = false;
         this.isForm = true;
         this.cdr.detectChanges();
     }
 
     dateChange(){
-        console.log(this.row.date);
+        // console.log(this.row.date);
     }
 
     backTolist(){
