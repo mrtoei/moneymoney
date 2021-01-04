@@ -12,8 +12,6 @@ import { MenuComponent } from '@components/layout/menu/menu.component';
 import { FooterComponent } from '@components/layout/footer/footer.component';
 import { DashboardComponent } from '@components/dashboard/dashboard.component';
 
-
-
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
   { path: 'login' , component: LoginComponent },

@@ -4,7 +4,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {NgModel, FormsModule} from '@angular/forms';
 import {ModalModule} from "ngx-bootstrap/modal";
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {WelletListComponent} from '@components/wellet/welletList.component';
 import {WelletFormComponent} from '@components//wellet/welletForm.component';
 import {TransactionListComponent} from '@components/wellet/transation/transactionList.component';
