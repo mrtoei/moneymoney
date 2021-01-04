@@ -5,7 +5,6 @@ import { WelletService } from '@services/wellet.service';
 @Component({
   selector: 'app-wellet-form',
   templateUrl: './welletForm.html',
-  styleUrls: ['./wellet.scss'],
   exportAs: 'formModalEX'
 })
 export class WelletFormComponent extends BaseFormModalComponent{

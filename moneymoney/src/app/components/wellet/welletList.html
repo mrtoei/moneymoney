@@ -1,13 +1,13 @@
-<div class="content-wrapper">
-    <section class="content wellet">
+<div class="content-wrapper" [ngClass]="currentPanel=='welletList'?'':'vHide'">
+    <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 wellet-header">
+                <div class="col-md-12 header">
                     <label>My Wellets</label>
                     <span (click)="openFormModal()"><i class="fas fa-plus-circle" ></i></span>
                 </div>
             </div>
-            <div class="row">
+            <div class="row wellet">
                 <div class="col-md-12 wellet-list" *ngIf="loading">
                     Loading . . .
                 </div>
@@ -35,7 +35,7 @@
                                     <span>3000</span>
                                 </div>
                                 <div>
-                                    <button class="btn btn-info btn-sm" [routerLink]="['/wellet/transaction/', row.id]">Detail</button>
+                                    <button class="btn btn-info btn-sm" (click)="showPanel('transactionList', row)">Detail</button>
                                 </div>
                             </div>
                         </div>
@@ -47,3 +47,5 @@
 
     <app-wellet-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-wellet-form>
 </div>
+
+<transactionList *ngIf="currentPanel=='transactionList'" (back)="backToWelletList()"></transactionList>

@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import {BaseFormModalComponent} from '@cComponents/base-form-modal.component';
 import {WelletService} from '@services/wellet.service';
 
 
 @Component({
-  selector: 'app-transaction-form',
+  selector: 'transactionForm',
   templateUrl: './transactionForm.html',
-  styleUrls: ['./transaction.scss'],
   exportAs: 'formModalEX'
 })
 export class TransactionFormComponent extends BaseFormModalComponent{
@@ -16,6 +15,9 @@ export class TransactionFormComponent extends BaseFormModalComponent{
     dateInputFormat: 'YYYY-MM-DD',
     selectFromOtherMonth: true
   }
+
+  @Output('back')
+  backToListing = new EventEmitter();
 
   constructor(public componentService: WelletService) {
     super(componentService );
@@ -40,5 +42,9 @@ export class TransactionFormComponent extends BaseFormModalComponent{
 
   save() {
     console.log(this.row);
+  }
+
+  backToTransactionList(){
+      this.backToListing.emit();
   }
 }

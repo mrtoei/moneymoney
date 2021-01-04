@@ -1,23 +1,23 @@
-<div class="content-wrapper">
+<div class="content-wrapper" [ngClass]="currentPanel=='transactionList'?'':'vHide'">
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 header">
                     <label>Transaction</label>
                     <div>
-                        <span ><i class="fas fa-plus-circle" ></i></span>
-                        <span [routerLink]="['/wellet/']"><i class="fas fa-reply"></i></span>
+                        <span (click)="showPanel('transactionForm')"><i class="fas fa-plus-circle" ></i></span>
+                        <span (click)="backToWelletList()"><i class="fas fa-reply"></i></span>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3 wellet">
+            <div class="row transaction">
+                <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
                             <div class="my-wellet-icon">
                                 <img src="assets/images/flaticon/wallet.png">
                             </div>
-                            <div class="my-wellet-detail">
+                            <div class="detail">
                                 <h4 class="card-text">{{welletName}}</h4>
                                 <div>
                                     <label>Inflow</label>
@@ -49,6 +49,6 @@
             </div>
         </div>
     </section>
-
 <!--    <app-transaction-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-transaction-form>-->
 </div>
+<transactionForm *ngIf="currentPanel=='transactionForm'" (back)="backTotransactionList()"></transactionForm>

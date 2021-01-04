@@ -1,0 +1,118 @@
+$green: #2eb494;
+// Header
+.signOut{
+  cursor: pointer;
+
+  :hover {
+    color: red!important;
+  }
+}
+
+
+// Content wrapper
+.content-wrapper{
+  .content{
+    padding: 0;
+    .header{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: $green;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      label{
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      span{
+        margin-left: 1rem;
+        cursor: pointer;
+        &:hover{
+          opacity: 0.5;
+          background: $green;
+        }
+      }
+    }
+  }
+}
+
+
+// Wallet
+.card{
+  margin-right: 1rem;
+  idth: 250px;
+  .card-body{
+    display: flex;
+    flex-direction: row;
+    .my-wellet-icon{
+      margin-right: 2rem;
+      img{
+        width: 80px;
+      }
+    }
+  }
+}
+
+.wellet {
+  .wellet-list{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+}
+.wellet-header-detail{
+  background: $green;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+.wellet-content {
+  .card{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem !important;
+  }
+}
+// Transaction
+.transaction{
+  .card{
+    .card-body{
+      .icon{
+        img{
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+// Category
+.category{
+  .div-btn-action{
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+
+    button{
+      border-radius: 100%;
+      border: 1px solid transparent;
+      color: #797979!important;
+      background-color: #fff!important;
+      border-color: #e1e8ee!important;
+      outline: 0! important;
+      margin-right: 5px;
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+      }
+      &:hover{
+        color: #797979!important;
+        background-color: #e1e8ee!important;
+        border-color: #e1e8ee!important;
+      }
+    }
+  }
+}
+

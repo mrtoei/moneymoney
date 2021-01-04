@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, ViewChild} from '@angular/core';
+import {ChangeDetectorRef, Component, EventEmitter, Output, ViewChild} from '@angular/core';
 import {WelletService} from '@services/wellet.service';
 import {TransactionService} from '@services/transaction.service';
 import {BaseListComponent} from '@cComponents/base-list.component';
@@ -6,9 +6,8 @@ import {ActivatedRoute} from '@angular/router';
 import {TransactionFormComponent} from '@components/wellet/transation/transactionForm.component';
 
 @Component({
-    selector: 'app-transaction-list',
-    templateUrl: './transactionList.html',
-    styleUrls: ['./transaction.scss']
+    selector: 'transactionList',
+    templateUrl: './transactionList.html'
 })
 export class TransactionListComponent extends BaseListComponent{
 
@@ -16,8 +15,7 @@ export class TransactionListComponent extends BaseListComponent{
     transactionList:any = [];
     row: any = {};
 
-    isList = true;
-    isForm = false;
+    currentPanel = 'transactionList';
 
     bsValue = new Date();
     bsConfig = {
@@ -26,7 +24,10 @@ export class TransactionListComponent extends BaseListComponent{
     }
 
     @ViewChild(TransactionFormComponent)
-    public rowForm: TransactionFormComponent;
+    public TransactionForm: TransactionFormComponent;
+
+    @Output('back')
+    backToListing = new EventEmitter();
 
     constructor(
         public componentService: WelletService,
@@ -45,7 +46,6 @@ export class TransactionListComponent extends BaseListComponent{
     {
         this.activatedRoute.params.subscribe(
             params=>{
-                this.loadWellet(params.id);
                 this.loadTransaction(params.id);
             }
         )
@@ -74,20 +74,27 @@ export class TransactionListComponent extends BaseListComponent{
         )
     }
 
-    openTransactionPanel(){
-        this.isList = false;
-        this.isForm = true;
+    show(row?: any){
+        this.loadWellet(row.id);
+    }
+
+    showPanel(panelCode: string, row?: any){
+        this.currentPanel = panelCode;
         this.cdr.detectChanges();
+        if (panelCode ==='transactionForm'){
+            this.TransactionForm;
+        }
     }
 
     dateChange(){
         // console.log(this.row.date);
     }
 
-    backTolist(){
-        this.isList = true;
-        this.isForm = false;
-        this.cdr.detectChanges();
+    backTotransactionList(){
+        this.currentPanel= 'transactionList';
     }
 
+    backToWelletList(){
+        this.backToListing.emit();
+    }
 }

@@ -5,7 +5,6 @@ import { CategoryService } from '@services/category.service';
 @Component({
   selector: 'app-category-form',
   templateUrl: './categoryForm.component.html',
-  styleUrls: ['./category.component.scss'],
   exportAs: 'formModalEX'
 })
 export class CategoryFormComponent extends BaseFormModalComponent{
