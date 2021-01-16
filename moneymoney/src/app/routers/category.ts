@@ -4,8 +4,8 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {NgModel, FormsModule} from '@angular/forms';
 import {ModalModule} from "ngx-bootstrap/modal";
-import {CategoryListComponent} from '@components/setting/category/categoryList.component';
-import {CategoryFormComponent} from '@components/setting/category/categoryForm.component';
+import {CategoryListComponent} from '@components/bos/setting/category/categoryList.component';
+import {CategoryFormComponent} from '@components/bos/setting/category/categoryForm.component';
 
 @NgModule({
     imports: [

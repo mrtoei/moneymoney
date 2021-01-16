@@ -1,0 +1,175 @@
+<div class="content-wrapper" >
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 header">
+                    <label>Transaction</label>
+                    <div>
+                        <span [ngClass]="currentPanel=='transactionList'?'':'vHide'" (click)="showPanel('transactionForm')"><i class="fas fa-plus-circle" ></i></span>
+                        <span (click)="backToWelletList()"><i class="fas fa-reply"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row transaction">
+                <div class="col-md-3"></div>
+
+                <!-- transactionList -->
+                <div class="col-md-6 transactionList" [ngClass]="currentPanel=='transactionList'?'':'vHide'">
+                    <div class="transaction-content">
+                        <div class="transaction-header">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <span>Inflow</span>
+                                </div>
+                                <div class="col-sm-6 d-flex justify-content-end">
+                                    <span [ngClass]="{'iGreen': inFlow > 0}">{{numF(inFlow)}}</span>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-6">
+                                    <span>outFlow</span>
+                                </div>
+                                <div class="col-sm-6 d-flex justify-content-end">
+                                    <span [ngClass]="{'iRed': inFlow > 0}">{{numF(outFlow)}}</span>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="row">
+                                <div class="col-sm-12 d-flex justify-content-end">
+                                    <span [ngClass]="{'iGreen': this.summaryTransaction > 0, 'iRed': this.summaryTransaction < 0  }">{{numF(this.summaryTransaction)}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ng-container *ngIf="loading && empty(transactionList)">Loading . . .</ng-container>
+                        <ng-container  *ngIf="!loading && nEmpty(transactionList)">
+                            <ng-container *ngFor="let tran of transactionList">
+                                <div *ngIf="nEmpty(tran.transections)" class="transaction-list">
+                                    <div class="row">
+                                        <div class="col-sm-12 date-total">
+                                            <div class="d-flex justify-content-between">
+                                                <label>{{dateText(tran.date)}}</label>
+                                                <div [ngClass]="{'iGreen': tran.sumDaliy > 0, 'iRed': tran.sumDaliy < 0  }">{{numF(tran.sumDaliy)}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="row mb-2 section-list" *ngFor="let tr of tran.transections" (mouseover)="focusInput=tr.id" (mouseout)="focusInput=null" >
+                                        <div class="col-sm-6 transaction-category-note">
+                                            <label class="mb-0">{{tr.category.name}}</label>
+                                            <div>{{tr.note}}</div>
+                                        </div>
+                                        <div class="col-sm-6 d-flex justify-content-end transaction-amount" >
+                                            <label [ngClass]="{'active': focusInput==tr.id,'iGreen': intVal(tr.type) === TRANSACTION_TYPE_INCOME, 'iRed': intVal(tr.type) === TRANSACTION_TYPE_EXPENSE }">
+                                                {{intVal(tr.type) === TRANSACTION_TYPE_INCOME ? '+':'-'}}{{numF(tr.amount)}}
+                                            </label>
+                                            <div [ngClass]="{'active': focusInput==tr.id}" >
+                                                <i (click)="showPanel('transactionForm', tr)" class="fas fa-pen-alt" ></i>
+                                                <i (click)="removeTransaction(tr)" class="far fa-trash-alt"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="!loading && empty(transactionList)">No Record . . .</ng-container>
+                    </div>
+                </div>
+
+                <!-- transactionForm -->
+                <div class="col-md-6 transactionForm" [ngClass]="currentPanel=='transactionForm'?'':'vHide'">
+                    <div class="card p-3">
+                        <form #popupForm="ngForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
+                                        <label>Type <span>*</span></label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input #type="ngModel" [(ngModel)]="row.type" name="type" class="form-check-input" type="radio" name="type" [value]="TRANSACTION_TYPE_EXPENSE" required>
+                                                <label class="form-check-label">Expense</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input #type="ngModel" [(ngModel)]="row.type" name="type" class="form-check-input" type="radio" name="type"  [value]="TRANSACTION_TYPE_INCOME" required>
+                                                <label class="form-check-label">Income</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" [ngClass]="{'has-error' : !date.valid && !date.pristine}">
+                                        <label>Date <span>*</span></label>
+                                        <input #date="ngModel" [(ngModel)]="row.date" name="date" type="text" class="form-control" minlength="2" maxlength="200" required
+                                               bsDatepicker
+                                               [bsValue]="bsValue"
+                                               [bsConfig]="bsConfig"
+                                               (bsValueChange)="dateChange()"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
+                                        <label>Note <span>*</span></label>
+                                        <input #name="ngModel" [(ngModel)]="row.note" name="note" type="text" class="form-control" minlength="2" maxlength="200" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" >
+                                    <div class="form-group" [ngClass]="{'has-error' : !amount.valid && !amount.pristine}">
+                                        <label>Category <span>*</span></label>
+                                        <select #category="ngModel" [(ngModel)]="row.cat_id" name="category" class="form-control" required>
+                                            <option>Choose Category</option>
+                                            <ng-container *ngFor="let cat of categories">
+                                                <option style="background-color:#2b2b2b; color: #ffffff;" [value]="cat.id">{{cat.name}}</option>
+                                                <ng-container *ngFor="let catChild of cat.child">
+                                                    <option [value]="catChild.id">{{catChild.name}}</option>
+                                                </ng-container>
+                                            </ng-container>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" [ngClass]="{'has-error' : !amount.valid && !amount.pristine}">
+                                        <label>Amount <span>*</span></label>
+                                        <input #amount="ngModel" [(ngModel)]="row.amount" name="amount" type="number" class="form-control" minlength="2" maxlength="200" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea  [(ngModel)]="row.description" name="description" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-group mb-3">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 buttonGroup">
+                                    <button type="button" (click)="save()" [disabled]="!popupForm.valid" class="btn btn-sm btn-primary btn-save">Save</button>
+                                    <button type="button" (click)="cancel()" class="btn btn-sm btn-secondary">Close</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </section>
+</div>
+

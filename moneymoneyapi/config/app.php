@@ -66,8 +66,8 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
-    'timezone' => 'Asia/Bangkok',
+    define('DATE_TIME_ZONE', 'Asia/Bangkok'),
+    'timezone' => DATE_TIME_ZONE,
 
     /*
     |--------------------------------------------------------------------------

@@ -44,7 +44,7 @@ export abstract class BaseListComponent implements OnInit
     {
         Swal.fire({
             title: 'Confirm to delete record?',
-            text: `Category name : ${row.name}`,
+            text: ``,
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',

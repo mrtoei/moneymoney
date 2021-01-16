@@ -5,17 +5,20 @@ export class SearchModel extends NgModel{
     sorting: any = {field: '', direction: 'asc'};
     rows: any = [];
 
-    constructor() {
+    constructor()
+    {
         super(null, null, null, null);
     }
 
-    updateResult(model: SearchModel){
+    updateResult(model: SearchModel)
+    {
         this.filters = model.filters;
         this.sorting = model.sorting;
         this.rows = model.rows;
     }
 
-    toParams(){
+    toParams()
+    {
         return {
             filters: this.filters,
             sorting: this.sorting,

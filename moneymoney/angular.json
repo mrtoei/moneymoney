@@ -28,11 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "src/assets/scss/main.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/assets/scss/main.scss"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -53,7 +51,7 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
+              "buildOptimizer": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -84,50 +82,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "moneymoney:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "src/styles.scss",
-              "./node_modules/sweetalert2/src/sweetalert2.scss"
-            ],
-            "scripts": [
-              "./node_modules/sweetalert2/src/sweetalert2.js"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "devServerTarget": "moneymoney:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "moneymoney:serve:production"
-            }
           }
         }
       }

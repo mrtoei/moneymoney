@@ -1,9 +1,3 @@
-/*
-  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
-  It is not intended to be used to perform a compilation.
-
-  To learn more about this file see: https://angular.io/config/solution-tsconfig.
-*/
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -28,6 +22,7 @@
       "@cComponents/*": ["./src/app/_common/components/*"],
       "@cUtil/*": ["./src/app/_common/util/*"],
       "@cxFunc": ["./src/app/_common/util/xfunction"],
+      "@cPipe/*": ["./src/app/_common/pipe/*"],
       "@env": ["./src/environments/environment.ts"],
       "@components/*": ["./src/app/components/*"],
       "@routers/*": ["./src/app/routers/*"],

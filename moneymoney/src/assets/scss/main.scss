@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&display=swap');
+
+*{
+  font-family: 'Mulish', sans-serif;
+  letter-spacing: 1.5px;
+}
+
 @import 'app','login';
 
 .vHide{ display: none !important; }
@@ -7,3 +14,15 @@
 .c{ text-align: center;}
 
 .pl-3{ margin-right: 50px}
+
+.iRed{color: #fc1500;}
+.iGreen{color: #0cab02;}
+
+.green {
+  background-color: #4caf50;
+  color: rgba(255,255,255,.87);
+}
+.red {
+  background-color: #ff1a00;
+  color: rgba(255,255,255,.87);
+}

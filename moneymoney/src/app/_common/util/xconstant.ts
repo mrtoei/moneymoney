@@ -1,0 +1,2 @@
+export const TRANSACTION_TYPE_EXPENSE = 1;
+export const TRANSACTION_TYPE_INCOME = 2;

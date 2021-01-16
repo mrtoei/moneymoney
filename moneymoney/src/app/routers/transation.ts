@@ -5,16 +5,16 @@ import {RouterModule} from '@angular/router';
 import {NgModel, FormsModule} from '@angular/forms';
 import {ModalModule} from "ngx-bootstrap/modal";
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
-import {TransactionModule} from "./transation";
-import {WelletListComponent} from "../components/bos/wellet/welletList.component";
-import {WelletFormComponent} from "../components/bos/wellet/welletForm.component";
+import {TransactionListComponent} from "../components/bos/transation/transactionList.component";
+import {TransactionFormComponent} from "../components/bos/transation/transactionForm.component";
+
 
 @NgModule({
     imports: [
         RouterModule.forChild([
             {
                 path: '',
-                component: WelletListComponent
+                component: TransactionListComponent
             }
         ])
     ],
@@ -23,7 +23,7 @@ import {WelletFormComponent} from "../components/bos/wellet/welletForm.component
     ]
 })
 
-export class WelletRoutingModule
+export class TransactionRoutingModule
 {
 }
 
@@ -31,20 +31,22 @@ export class WelletRoutingModule
     imports: [
         FormsModule,
         CommonModule,
-        WelletRoutingModule,
+        TransactionRoutingModule,
         ModalModule.forRoot(),
-        BsDatepickerModule.forRoot(),
-        TransactionModule
+        BsDatepickerModule.forRoot()
     ],
     declarations: [
-        WelletListComponent,
-        WelletFormComponent,
+        TransactionListComponent,
+        TransactionFormComponent
+    ],
+    exports: [
+        TransactionListComponent
     ],
     providers: [
         NgModel
     ]
 })
 
-export class WelletModule
+export class TransactionModule
 {
 }
