@@ -17,6 +17,7 @@ export class CategoryListComponent extends BaseListComponent{
 
   constructor(
       public componentService: CategoryService,
+      private cdr : ChangeDetectorRef
   ) {
     super()
   }

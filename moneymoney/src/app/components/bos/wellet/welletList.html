@@ -1,4 +1,4 @@
-<div class="content-wrapper" [ngClass]="currentPanel=='welletList'?'':'vHide'">
+<div class="content-wrapper" [ngClass]="currentPanel=='welletList'?'d-block':'d-none'">
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -48,4 +48,4 @@
     <app-wellet-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-wellet-form>
 </div>
 
-<transactionList *ngIf="currentPanel=='transactionList'" (back)="backToWelletList()"></transactionList>
+<transactionList [ngClass]="currentPanel=='transactionList'?'d-block':'d-none'" (back)="backToWelletList()"></transactionList>

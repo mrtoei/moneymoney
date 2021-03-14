@@ -1,82 +1,109 @@
-<form #popupForm="ngForm">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
-                <label>Type <span>*</span></label>
-                <div>
-                    <div class="form-check form-check-inline">
-                        <input #type="ngModel" [(ngModel)]="row.type" name="type" class="form-check-input" type="radio" name="type" value="1" required>
-                        <label class="form-check-label">Expense</label>
+<div class="content-wrapper" >
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 header">
+                    <label>Transaction</label>
+                    <div>
+                        <span (click)="backToTransactionList()"><i class="fas fa-reply"></i></span>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input #type="ngModel" [(ngModel)]="row.type" name="type" class="form-check-input" type="radio" name="type"  value="2" required>
-                        <label class="form-check-label">Income</label>
+                </div>
+            </div>
+            <div class="row transaction" *ngIf="!loading">
+                <div class="col-md-3"></div>
+                <!-- transactionForm -->
+                <div class="col-md-6 transactionForm" >
+                    <div class="card p-3">
+                        <form #popupForm="ngForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
+                                        <label>Type <span>*</span></label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input #type="ngModel" [(ngModel)]="row.type" name="type" class="form-check-input" type="radio" name="type" [value]="TRANSACTION_TYPE_EXPENSE" required>
+                                                <label class="form-check-label">Expense</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input #type="ngModel" [(ngModel)]="row.type" name="type" class="form-check-input" type="radio" name="type"  [value]="TRANSACTION_TYPE_INCOME" required>
+                                                <label class="form-check-label">Income</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" [ngClass]="{'has-error' : !date.valid && !date.pristine}">
+                                        <label>Date <span>*</span></label>
+                                        <input #date="ngModel" [(ngModel)]="row.date" name="date" type="text" class="form-control" minlength="2" maxlength="200" required
+                                               bsDatepicker
+                                               [bsValue]="bsValue"
+                                               [bsConfig]="bsConfig"
+                                               (bsValueChange)="dateChange()"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
+                                        <label>Note <span>*</span></label>
+                                        <input #name="ngModel" [(ngModel)]="row.note" name="note" type="text" class="form-control" minlength="2" maxlength="200" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" >
+                                    <div class="form-group" [ngClass]="{'has-error' : !amount.valid && !amount.pristine}">
+                                        <label>Category <span>*</span></label>
+                                        <select #category="ngModel" [(ngModel)]="row.cat_id" name="category" class="form-control" required>
+                                            <option>Choose Category</option>
+                                            <ng-container *ngFor="let cat of categories">
+                                                <option style="background-color:#2b2b2b; color: #ffffff;" [value]="cat.id">{{cat.name}}</option>
+                                                <ng-container *ngFor="let catChild of cat.child">
+                                                    <option [value]="catChild.id">{{catChild.name}}</option>
+                                                </ng-container>
+                                            </ng-container>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" [ngClass]="{'has-error' : !amount.valid && !amount.pristine}">
+                                        <label>Amount <span>*</span></label>
+                                        <input #amount="ngModel" [(ngModel)]="row.amount" name="amount" type="number" class="form-control" minlength="2" maxlength="200" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea  [(ngModel)]="row.description" name="description" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="input-group mb-3">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 buttonGroup">
+                                    <button type="button" (click)="save()" [disabled]="!popupForm.valid" class="btn btn-sm btn-primary btn-save">Save</button>
+                                    <button type="button" (click)="backToTransactionList()" class="btn btn-sm btn-secondary">Close</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-group" [ngClass]="{'has-error' : !date.valid && !date.pristine}">
-                <label>Date <span>*</span></label>
-                <input #date="ngModel" [(ngModel)]="row.date" name="date" type="text" class="form-control" minlength="2" maxlength="200" required
-                       bsDatepicker
-                       [bsValue]="bsValue"
-                       [bsConfig]="bsConfig"
-                       (bsValueChange)="dateChange()"
-                >
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
-                <label>Note <span>*</span></label>
-                <input #name="ngModel" [(ngModel)]="row.note" name="note" type="text" class="form-control" minlength="2" maxlength="200" required>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6" >
-            <div class="form-group" [ngClass]="{'has-error' : !amount.valid && !amount.pristine}">
-                <label>Category <span>*</span></label>
-                <select #category="ngModel" [(ngModel)]="row.category" name="category" class="form-control" required>
-                    <option>Default select</option>
-                </select>
-            </div>
-
-        </div>
-        <div class="col-md-6">
-            <div class="form-group" [ngClass]="{'has-error' : !amount.valid && !amount.pristine}">
-                <label>Amount <span>*</span></label>
-                <input #amount="ngModel" [(ngModel)]="row.amount" name="amount" type="text" class="form-control" minlength="2" maxlength="200" required>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label>Description</label>
-                <textarea  [(ngModel)]="row.description" name="description" class="form-control" rows="3"></textarea>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="input-group mb-3">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <button type="button" (click)="save()" [disabled]="!popupForm.valid" class="btn btn-primary">Save</button>
-            <button type="button" (click)="cancel()" class="btn btn-secondary">Close</button>
-        </div>
-    </div>
-</form>
-
+    </section>
+</div>
 
 

@@ -1,14 +1,18 @@
-import {Component, Output, EventEmitter} from '@angular/core';
-import {BaseFormModalComponent} from "@cComponents/base-form-modal.component";
-import {WelletService} from "@services/bos/wellet.service";
-import {toUtcDate} from "@cxFunc";
-
+import {Component, Output, EventEmitter, OnInit} from '@angular/core';
+import {intVal, toUtcDate} from "@cxFunc";
+import {TRANSACTION_TYPE_EXPENSE, TRANSACTION_TYPE_INCOME} from "@cUtil/xconstant";
+import {TransactionService} from "@services/bos/transaction.service";
+import {CategoryService} from "@services/bos/category.service";
 @Component({
   selector: 'transactionForm',
   templateUrl: './transactionForm.html',
   exportAs: 'formModalEX'
 })
-export class TransactionFormComponent extends BaseFormModalComponent{
+export class TransactionFormComponent implements OnInit{
+
+  loading: boolean = false;
+  row: any = {};
+  categories:any = [];
 
   bsValue = new Date();
   bsConfig = {
@@ -16,13 +20,22 @@ export class TransactionFormComponent extends BaseFormModalComponent{
     selectFromOtherMonth: true
   }
 
-  toUtcDate = toUtcDate;
+  TRANSACTION_TYPE_EXPENSE = TRANSACTION_TYPE_EXPENSE;
+  TRANSACTION_TYPE_INCOME = TRANSACTION_TYPE_INCOME;
+
+  @Output('afterSaved')
+  afterSaved = new EventEmitter();
 
   @Output('back')
   backToListing = new EventEmitter();
 
-  constructor(public componentService: WelletService) {
-    super(componentService );
+  constructor(public componentService: TransactionService, private categoryService: CategoryService) {
+    this.initializeRow()
+  }
+
+  ngOnInit()
+  {
+    this.loadCategories();
   }
 
   initializeRow()
@@ -32,21 +45,67 @@ export class TransactionFormComponent extends BaseFormModalComponent{
       type:'',
       date: toUtcDate(new Date()),
       note: '',
-      category:'',
+      wellet_id:'',
+      cat_id:'',
       amount:'',
       description: ''
     };
+  }
+
+  loadCategories()
+  {
+    this.categoryService.loadCategories().subscribe(result=>{
+      if(result.success){
+        this.categories = result.data;
+      }
+    })
   }
 
   dateChange(){
     this.row.date = toUtcDate(this.row.date);
   }
 
-  save() {
-    console.log(this.row);
+  show(welletRow:any ,rowId?: any)
+  {
+    this.row.wellet_id = welletRow.id;
+    if(rowId && intVal(rowId) > 0){
+      this.loadRow(rowId);
+    }
+  }
+
+  save(){
+    let action = 'create';
+    let request ;
+    if (this.row.id === 0){
+      request = this.componentService.create(this.row);
+    }else{
+      action = 'update';
+      request = this.componentService.update(this.row);
+    }
+    request.subscribe(result=>{
+      if(result.success){
+        this.afterSaved.emit({
+          action: action,
+          row: result.data
+        })
+        this.initializeRow();
+      }
+    });
+  }
+
+  loadRow(rowId: any)
+  {
+    this.loading = true;
+    this.componentService.read(rowId).subscribe(result => {
+      if(result.success){
+        this.row = result.data;
+        this.loading = false;
+      }
+    });
   }
 
   backToTransactionList(){
-      this.backToListing.emit();
+    this.initializeRow();
+    this.backToListing.emit();
   }
 }

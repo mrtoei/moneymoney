@@ -27,21 +27,23 @@ Route::group(['middleware' => 'auth:api'],function(){
 
     Route::group(['prefix'=>'/bos'],function(){
         Route::group(['prefix'=>'/wellet'],function(){
-            Route::post('/listing', 'bos\Wellet@listing');
+            Route::post('/find', 'bos\Wellet@find');
             Route::get('/read/{id}', 'bos\Wellet@read');
             Route::post('/create', 'bos\Wellet@create');
         });
 
         Route::group(['prefix'=>'/transaction'],function(){
-            Route::post('/listing', 'bos\transaction@listing');
+            Route::post('/find', 'bos\transaction@find');
+            Route::post('/loadTransaction', 'bos\transaction@loadTransaction');
             Route::post('/create', 'bos\transaction@create');
+            Route::get('/read/{id}', 'bos\transaction@read');
             Route::post('/update', 'bos\transaction@update');
             Route::get('/remove/{id}', 'bos\transaction@remove');
         });
 
         Route::group(['prefix'=>'/category'],function(){
             Route::post('/find', 'bos\Category@find');
-            Route::get('/listing', 'bos\Category@listing');
+            Route::get('/loadCategories', 'bos\Category@loadCategories');
             Route::get('/read/{id}', 'bos\Category@read');
             Route::post('/create', 'bos\Category@create');
             Route::post('/update', 'bos\Category@update');

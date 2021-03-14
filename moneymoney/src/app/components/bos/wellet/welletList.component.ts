@@ -30,16 +30,14 @@ export class WelletListComponent extends BaseListComponent{
   createSearchModel()
   {
     this.searchModel = new SearchModel();
-    this.searchModel.filters = {
-      name:''
-    };
+    this.searchModel.filters = {};
   }
 
   showPanel(panelCode: string, row?: any){
     this.currentPanel = panelCode;
     this.cdr.detectChanges();
     if (panelCode ==='transactionList'){
-      this.transactionList.show(row);
+      this.transactionList.loadTransaction(row);
     }
   }
 

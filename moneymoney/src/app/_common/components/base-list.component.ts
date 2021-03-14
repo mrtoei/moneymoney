@@ -1,4 +1,4 @@
-import {Directive, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Directive, OnInit} from '@angular/core';
 import {SearchModel} from '@cModel/SearchModel';
 import Swal from 'sweetalert2';
 
@@ -13,7 +13,6 @@ export abstract class BaseListComponent implements OnInit
     searchModel: any = new SearchModel();
 
     loading:boolean = false;
-
 
     constructor()
     {

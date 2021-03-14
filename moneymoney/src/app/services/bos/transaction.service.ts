@@ -22,8 +22,12 @@ export class TransactionService {
     return httpHeaders;
   }
 
-  listing(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/bos/transaction/listing`, model, {headers: this.headers()});
+  find(model: any): Observable<any>{
+    return this.httpClient.post(`${this.hostUrl}/bos/transaction/find`, model, {headers: this.headers()});
+  }
+
+  loadTransaction(model: any): Observable<any>{
+    return this.httpClient.post(`${this.hostUrl}/bos/transaction/loadTransaction`, model, {headers: this.headers()});
   }
 
   create(model: any): Observable<any>{

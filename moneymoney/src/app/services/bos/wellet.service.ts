@@ -23,7 +23,7 @@ export class WelletService {
   }
 
   find(searchModel: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/bos/wellet/listing`, searchModel, {headers: this.headers()});
+    return this.httpClient.post(`${this.hostUrl}/bos/wellet/find`, searchModel, {headers: this.headers()});
   }
 
   create(model: any): Observable<any>{

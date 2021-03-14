@@ -16,7 +16,7 @@ class Wellet extends BaseController
         $this->wellet = new welletModel();
     }
 
-    public function listing(Request $request)
+    public function find(Request $request)
     {
         $user = $request->user();
         $result = $this->wellet::where([

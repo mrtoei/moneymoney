@@ -28,7 +28,7 @@ class Category extends BaseController
         return $this->success(['rows'=> $alist]);
     }
 
-    public function listing(Request $request)
+    public function loadCategories(Request $request)
     {
         $userInfo = $request->user();
         $this->category;

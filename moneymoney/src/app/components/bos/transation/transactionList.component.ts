@@ -1,19 +1,17 @@
 import {ChangeDetectorRef, Component, EventEmitter, Output, ViewChild} from '@angular/core';
-import {BaseListComponent} from "@cComponents/base-list.component";
-import {WelletService} from "@services/bos/wellet.service";
 import {TransactionService} from "@services/bos/transaction.service";
-import {dateText, empty, intVal, nEmpty, numF, toUtcDate} from "@cxFunc";
-import {CategoryService} from "@services/bos/category.service";
+import {dateText, empty, intVal, nEmpty, numberVal, numF, toUtcDate} from "@cxFunc";
 import {TRANSACTION_TYPE_EXPENSE, TRANSACTION_TYPE_INCOME} from "@cUtil//xconstant";
 import Swal from "sweetalert2";
+import {TransactionFormComponent} from "./transactionForm.component";
 
 
 @Component({
     selector: 'transactionList',
     templateUrl: './transactionList.html'
 })
-export class TransactionListComponent extends BaseListComponent{
-
+export class TransactionListComponent{
+    loading = false;
     intVal = intVal;
     numF = numF;
     nEmpty = nEmpty;
@@ -26,85 +24,36 @@ export class TransactionListComponent extends BaseListComponent{
     filters: any = {};
     welletRow: any;
     transactionList: any = [];
-    categories:any = [];
-    row: any = {};
     inFlow: number = 0;
     outFlow: number = 0;
     summaryTransaction: number = 0;
+    focusInput: any = null;
 
     currentPanel = 'transactionList';
-
-    bsValue = new Date();
-    bsConfig = {
-        dateInputFormat: 'YYYY-MM-DD',
-        selectFromOtherMonth: true
-    }
-    focusInput: any = null;
 
     @Output('back')
     backToListing = new EventEmitter();
 
+    @ViewChild(TransactionFormComponent)
+    public rowForm: TransactionFormComponent;
+
     constructor(
-        public componentService: WelletService,
-        private transactionService: TransactionService,
-        private categoryService: CategoryService,
+        public componentService: TransactionService,
         private cdr : ChangeDetectorRef
-    ) {
-        super();
-    }
+    ) { }
 
-    createSearchModel() {
-
-        this.row = {
-            id: 0,
-            type:'',
-            date: toUtcDate(new Date()),
-            note: '',
-            wellet_id:'',
-            cat_id:'',
-            amount:'',
-            description: ''
-        };
-        this.loadCategories();
-    }
-
-    loadCategories()
+    loadTransaction(welletRow?: any)
     {
-        this.categoryService.listing().subscribe(result=>{
-            if(result.success){
-                this.categories = result.data;
-            }
-        })
-    }
-
-    showPanel(panelCode: string, row?: any)
-    {
-        if(row && row.id > 0){
-            this.row = row;
-        }
-        this.currentPanel = panelCode;
-        this.cdr.detectChanges();
-    }
-
-    show(row?: any)
-    {
-        this.welletRow  = row;
-        this.row.wellet_id = row.id;
-
+        this.welletRow  = welletRow;
         this.filters = {
-            wellet_id: row.id,
-            month_year: this.currentMonth()
+            wellet_id: this.welletRow.id,
+            month_year: toUtcDate(new Date())
         };
 
-        this.loadTransaction();
-    }
-
-    loadTransaction()
-    {
         this.transactionList = [];
 
         this.loading = true;
-        this.transactionService.listing(this.filters).subscribe(result=>{
+        this.componentService.loadTransaction(this.filters).subscribe(result=>{
             this.loading = false;
             if (result.success){
                 this.transactionList = result.data;
@@ -125,79 +74,29 @@ export class TransactionListComponent extends BaseListComponent{
                 if(nEmpty(tran.transections)){
                     for(let tr of tran.transections){
                         if(intVal(tr.type) === TRANSACTION_TYPE_INCOME){
-                            sumDaliy += intVal(tr.amount);
-                            this.inFlow += intVal(tr.amount);
+                            sumDaliy += numberVal(tr.amount);
+                            this.inFlow += numberVal(tr.amount);
                         }else{
-                            sumDaliy -= intVal(tr.amount);
-                            this.outFlow += intVal(tr.amount);
+                            sumDaliy -= numberVal(tr.amount);
+                            this.outFlow += numberVal(tr.amount);
                         }
                     }
                     tran.sumDaliy = sumDaliy;
                 }
             }
-
             this.summaryTransaction = this.inFlow - this.outFlow;
         }
     }
 
-    dateChange()
+    show(row?: any)
     {
-        this.row.date = toUtcDate(this.row.date);
-    }
-
-    save()
-    {
-        if (this.row.id === 0){
-            this.saveRecord();
+        this.currentPanel = 'transactionForm';
+        if (row && intVal(row.id) > 0){
+            this.rowForm.show(this.welletRow, row.id);
         }else{
-            this.updateRecord();
+            this.rowForm.show(this.welletRow)
         }
-    }
-
-    saveRecord()
-    {
-        this.transactionService.create(this.row).subscribe(result=>{
-            if(result.success){
-                this.loadTransaction();
-
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Record is saved!',
-                    showConfirmButton: false,
-                    timer: 2000
-                })
-
-                this.cdr.detectChanges();
-                this.currentPanel= 'transactionList';
-            }
-        })
-    }
-
-    updateRecord()
-    {
-        this.transactionService.update(this.row).subscribe(result=>{
-            if(result.success){
-                this.loadTransaction();
-
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Record is saved!',
-                    showConfirmButton: false,
-                    timer: 2000
-                })
-
-                this.cdr.detectChanges();
-                this.currentPanel= 'transactionList';
-            }
-        })
-    }
-
-    cancel()
-    {
-        this.currentPanel= 'transactionList';
-        this.createSearchModel();
+        this.cdr.detectChanges();
     }
 
     removeTransaction(row)
@@ -212,20 +111,86 @@ export class TransactionListComponent extends BaseListComponent{
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                this.transactionService.remove(row.id).subscribe(result=>{
-                    this.loadTransaction();
-                    if(result.success){
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'Record is removed!',
-                            showConfirmButton: false,
-                            timer: 1500
-                        })
-                    }
-                });
+               if(this.removeTransactionList(row)){
+                   this.componentService.remove(row.id).subscribe(result=>{
+                       if(result.success){
+                           this.sumTransaction();
+                           Swal.fire({
+                               position: 'top-end',
+                               icon: 'success',
+                               title: 'Record is removed!',
+                               showConfirmButton: false,
+                               timer: 1500
+                           })
+                       }
+                   });
+
+               }
             }
+        });
+    }
+
+    removeTransactionList(row)
+    {
+        this.transactionList = JSON.parse(JSON.stringify(this.transactionList));
+        for (let rowTran of this.transactionList){
+            if(nEmpty(rowTran.transections)){
+                for(let tr of rowTran.transections){
+                    if(intVal(tr.id) === intVal(row.id) && tr.date === row.date){
+                        rowTran.transections.splice(tr,1);
+                        return true;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    unShiftTransactionList(row)
+    {
+        this.transactionList = JSON.parse(JSON.stringify(this.transactionList));
+        for (let tran of this.transactionList){
+            if(tran.date === row.date){
+                tran.transections.unshift(row);
+                break;
+            }
+        }
+    }
+
+    afterSaved(data?: any)
+    {
+        this.transactionList = JSON.parse(JSON.stringify(this.transactionList));
+        if (data.action ===  'create'){
+           this.unShiftTransactionList(data.row);
+        }else if (data.action === 'update'){
+            for (let rowTran of this.transactionList){
+                for(let tr of rowTran.transections){
+                    if(intVal(tr.id) === intVal(data.row.id)){
+                        if(tr.date === data.row.date){
+                            const index = rowTran.transections.indexOf(tr);
+                            rowTran.transections[index] = JSON.parse(JSON.stringify(data.row));
+                        }else{
+                            if(this.removeTransactionList(tr)){
+                                this.unShiftTransactionList(data.row);
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        this.sumTransaction();
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Record is saved!',
+            showConfirmButton: false,
+            timer: 2000
         })
+
+        this.cdr.detectChanges();
+        this.currentPanel='transactionList';
     }
 
     backToWelletList()
@@ -233,10 +198,9 @@ export class TransactionListComponent extends BaseListComponent{
         this.backToListing.emit();
     }
 
-    currentMonth()
+    backToTransactionListing()
     {
-        const curMonthYear = toUtcDate(new Date())
-        return curMonthYear;
+        this.currentPanel='transactionList';
     }
 
 }

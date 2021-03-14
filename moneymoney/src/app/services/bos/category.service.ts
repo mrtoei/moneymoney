@@ -26,8 +26,8 @@ export class CategoryService {
     return this.httpClient.post(`${this.hostUrl}/bos/category/find`, model, {headers: this.headers()});
   }
 
-  listing(): Observable<any>{
-    return this.httpClient.get(`${this.hostUrl}/bos/category/listing`, {headers: this.headers()});
+  loadCategories(): Observable<any>{
+    return this.httpClient.get(`${this.hostUrl}/bos/category/loadCategories`, {headers: this.headers()});
   }
 
   read(id:any): Observable<any>{

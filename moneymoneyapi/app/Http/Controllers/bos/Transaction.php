@@ -24,7 +24,14 @@ class Transaction extends BaseController
         $this->wellet = new welletModel();
     }
 
-    public function listing(Request $request)
+    public function find(Request $request)
+    {
+        $model = (object)$request->json()->all();
+        $model->rows = $this->findByWelletDate($model);
+        return $this->success($model);
+    }
+
+    public function loadTransaction(Request $request)
     {
         $model = (object)$request->json()->all();
 
@@ -106,17 +113,7 @@ class Transaction extends BaseController
 
         if($this->transaction->save()){
             $lastId = $this->transaction->id;
-            $transactionRow = $this->transaction::find($lastId);
-            $transactionRow->category =  $this->category::find($transactionRow->cat_id);
-            $transactionRow->wellet =  $this->wellet::find($transactionRow->wellet_id);
-            unset($transactionRow->cat_id);
-            unset($transactionRow->wellet_id);
-
-            $row = new stdClass;
-            $row->date = date(DATE_FORMAT_MYSQL,strtotime($transactionRow->date));
-            $row->transactions = $transactionRow;
-
-            return $this->success($row);
+            return $this->read($lastId);
         }
     }
 
@@ -127,6 +124,7 @@ class Transaction extends BaseController
             ->update([
                 'date'=>$request->json('date'),
                 'note'=>$request->json('note'),
+                'amount'=>$request->json('amount'),
                 'description'=>$request->json('description'),
                 'type'=>$request->json('type'),
                 'cat_id'=>$request->json('cat_id')
