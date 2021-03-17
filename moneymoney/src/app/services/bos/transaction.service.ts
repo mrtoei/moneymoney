@@ -26,10 +26,6 @@ export class TransactionService {
     return this.httpClient.post(`${this.hostUrl}/bos/transaction/find`, model, {headers: this.headers()});
   }
 
-  loadTransaction(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/bos/transaction/loadTransaction`, model, {headers: this.headers()});
-  }
-
   create(model: any): Observable<any>{
     return this.httpClient.post(`${this.hostUrl}/bos/transaction/create`, model, {headers: this.headers()});
   }

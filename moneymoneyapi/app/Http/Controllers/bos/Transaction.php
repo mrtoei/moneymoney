@@ -5,7 +5,7 @@ namespace App\Http\Controllers\bos;
 use App\Http\Controllers\BaseController;
 
 use Illuminate\Http\Request;
-use App\Models\bos\Category as categoryModel;
+use App\Models\Bos\Category as categoryModel;
 use App\Models\Bos\Transaction as transactionModel;
 use App\Models\Bos\Wellet as welletModel;
 
@@ -25,13 +25,6 @@ class Transaction extends BaseController
     }
 
     public function find(Request $request)
-    {
-        $model = (object)$request->json()->all();
-        $model->rows = $this->findByWelletDate($model);
-        return $this->success($model);
-    }
-
-    public function loadTransaction(Request $request)
     {
         $model = (object)$request->json()->all();
 

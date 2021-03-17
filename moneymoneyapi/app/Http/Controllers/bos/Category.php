@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Bos;
+namespace App\Http\Controllers\bos;
 
 use App\Http\Controllers\BaseController;
-use App\Models\bos\Category as categoryModel;
+use App\Models\Bos\Category as categoryModel;
 use Illuminate\Http\Request;
 
 class Category extends BaseController

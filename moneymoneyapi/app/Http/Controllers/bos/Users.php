@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Bos;
+namespace App\Http\Controllers\bos;
 
 use App\Http\Controllers\BaseController;
 use App\User;

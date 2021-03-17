@@ -53,7 +53,7 @@ export class TransactionListComponent{
         this.transactionList = [];
 
         this.loading = true;
-        this.componentService.loadTransaction(this.filters).subscribe(result=>{
+        this.componentService.find(this.filters).subscribe(result=>{
             this.loading = false;
             if (result.success){
                 this.transactionList = result.data;
