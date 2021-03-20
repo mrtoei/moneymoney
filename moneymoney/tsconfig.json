@@ -33,7 +33,8 @@
     "enableIvy": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "preserveWhitespaces": false
+    "preserveWhitespaces": false,
+    "disableTypeScriptVersionCheck": true
   },
   "files": [
     "src/main.ts",
