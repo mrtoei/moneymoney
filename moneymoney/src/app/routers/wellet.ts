@@ -6,8 +6,8 @@ import {NgModel, FormsModule} from '@angular/forms';
 import {ModalModule} from "ngx-bootstrap/modal";
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {TransactionModule} from "./transation";
-import {WelletListComponent} from "../components/bos/wellet/welletList.component";
-import {WelletFormComponent} from "../components/bos/wellet/welletForm.component";
+import {WelletListComponent} from "../components/wellet/welletList.component";
+import {WelletFormComponent} from "../components/wellet/welletForm.component";
 
 @NgModule({
     imports: [

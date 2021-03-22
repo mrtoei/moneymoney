@@ -5,8 +5,8 @@ import {RouterModule} from '@angular/router';
 import {NgModel, FormsModule} from '@angular/forms';
 import {ModalModule} from "ngx-bootstrap/modal";
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
-import {TransactionListComponent} from "../components/bos/transation/transactionList.component";
-import {TransactionFormComponent} from "../components/bos/transation/transactionForm.component";
+import {TransactionListComponent} from "../components/transation/transactionList.component";
+import {TransactionFormComponent} from "../components/transation/transactionForm.component";
 
 
 @NgModule({

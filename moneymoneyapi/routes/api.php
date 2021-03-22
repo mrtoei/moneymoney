@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\bos\Category;
-use App\Http\Controllers\bos\Transaction;
-use App\Http\Controllers\bos\Wellet;
+use App\Http\Controllers\Category;
+use App\Http\Controllers\Transaction;
+use App\Http\Controllers\Wellet;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\Authentication;
+use App\Http\Controllers\Authentication;
 /*
 |--------------------------------------------------------------------------
 | API Routes

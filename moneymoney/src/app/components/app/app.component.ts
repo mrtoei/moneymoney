@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {LoginService} from "@services/auth/login.service";
+import {LoginService} from "@services/login.service";
 
 
 @Component({
@@ -11,5 +11,6 @@ export class AppComponent {
   constructor(
       public loginService: LoginService
   ) {
+
   }
 }

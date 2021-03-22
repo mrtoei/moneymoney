@@ -7,12 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from '@components/app/app.component';
-import { LoginComponent } from '@components/auth/login/login.component';
 import { HeaderComponent } from '@components/app/layout/header/header.component';
 import { MenuComponent } from '@components/app/layout/menu/menu.component';
 import { FooterComponent } from '@components/app/layout/footer/footer.component';
-import { DashboardComponent } from '@components/bos/dashboard/dashboard.component';
 import {CustomPipes} from "@cPipe/pipes";
+import {DashboardComponent} from "@components/dashboard/dashboard.component";
+import {LoginComponent} from "@components/login/login.component";
+import {BaseService} from "@cService/base.service";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
@@ -43,7 +44,9 @@ export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(r
     BrowserAnimationsModule,
     CustomPipes
   ],
-  providers: [],
+  providers: [
+    BaseService
+  ],
   bootstrap: [AppComponent],
   exports: [RouterModule]
 })

@@ -18,10 +18,12 @@
       "dom"
     ],
     "paths": {
+      "@cService/*": ["./src/app/_common/services/*"],
       "@cModel/*": ["./src/app/_common/models/*"],
       "@cComponents/*": ["./src/app/_common/components/*"],
       "@cUtil/*": ["./src/app/_common/util/*"],
       "@cxFunc": ["./src/app/_common/util/xfunction"],
+      "@cxSetting": ["./src/app/_common/util/xsetting"],
       "@cPipe/*": ["./src/app/_common/pipe/*"],
       "@env": ["./src/environments/environment.ts"],
       "@components/*": ["./src/app/components/*"],
