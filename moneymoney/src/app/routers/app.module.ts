@@ -14,14 +14,16 @@ import {CustomPipes} from "@cPipe/pipes";
 import {DashboardComponent} from "@components/dashboard/dashboard.component";
 import {LoginComponent} from "@components/login/login.component";
 import {BaseService} from "@cService/base.service";
+import {AuthGuard} from "@cGuard/auth.guard";
+import {AuthService} from "@cService/auth.service";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
   { path: 'login' , component: LoginComponent },
-  { path: 'dashboard' , component: DashboardComponent },
-  { path: 'wellet' , loadChildren:()=>import('@routers/wellet').then(m => m.WelletModule) },
-  { path: 'transaction' , loadChildren:()=>import('@routers/transation').then(m => m.TransactionModule) },
-  { path: 'setting/categories' , loadChildren:()=>import('@routers/category').then(m => m.CategoryModule)},
+  { canActivate: [AuthGuard], path: 'dashboard' , component: DashboardComponent },
+  { canActivate: [AuthGuard], path: 'wellet' , loadChildren:()=>import('@routers/wellet').then(m => m.WelletModule) },
+  { canActivate: [AuthGuard], path: 'transaction' , loadChildren:()=>import('@routers/transation').then(m => m.TransactionModule) },
+  { canActivate: [AuthGuard], path: 'setting/categories' , loadChildren:()=>import('@routers/category').then(m => m.CategoryModule)},
   // { path: '**', redirectTo: 'login'}
 ];
 export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(routes, { useHash: true });
@@ -45,7 +47,9 @@ export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(r
     CustomPipes
   ],
   providers: [
-    BaseService
+    BaseService,
+    AuthGuard,
+    AuthService
   ],
   bootstrap: [AppComponent],
   exports: [RouterModule]

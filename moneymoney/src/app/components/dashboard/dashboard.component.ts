@@ -1,5 +1,4 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {LoginService} from "@services/login.service";
 import {DashboardService} from "@services/dashboard.service";
 
 @Component({
@@ -13,7 +12,6 @@ export class DashboardComponent implements OnInit {
 
   @ViewChild('divChart') divChart:ElementRef;
   constructor(
-      private loginSerive: LoginService,
       public componentService: DashboardService,
   ) { }
 

@@ -51,7 +51,7 @@ class Authentication extends Controller
         if($revoke){
             return response()->json([
                 'status'=>200,
-                'msg'=>'logout success'
+                'success'=>TRUE
             ],200);
         }
     }

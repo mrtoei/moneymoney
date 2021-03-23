@@ -16,9 +16,9 @@ use App\Http\Controllers\Authentication;
 |
 */
 Route::get('/regsiter', 'Users@regsiter');
-Route::post('/auth/login', [Authentication::class,'login']);
+Route::post('/login', [Authentication::class,'login']);
 
-Route::get('/auth/login',function(){
+Route::get('/login',function(){
     return response()->json([
         'status'=>401,
         'error' => 'Unauthenticated.'
@@ -27,34 +27,32 @@ Route::get('/auth/login',function(){
 
 
 Route::group(['middleware' => 'auth:api'],function(){
-    Route::post('/auth/logout', [Authentication::class,'logout']);
-
-    Route::group(['prefix'=>'/bos'],function(){
-        Route::group(['prefix'=>'/wellet'],function(){
-            Route::post('/find', [Wellet::class,'find']);
-            Route::get('/read/{id}', [Wellet::class,'read']);
-            Route::post('/create', [Wellet::class,'create']);
-        });
-
-        Route::group(['prefix'=>'/transaction'],function(){
-            Route::post('/find', [Transaction::class,'find']);
-            Route::post('/loadTransaction', [Transaction::class,'loadTransaction']);
-            Route::post('/create', [Transaction::class,'create']);
-            Route::get('/read/{id}', [Transaction::class,'read']);
-            Route::post('/update', [Transaction::class,'update']);
-            Route::get('/remove/{id}', [Transaction::class,'remove']);
-        });
-
-        Route::group(['prefix'=>'/category'],function(){
-            Route::post('/find', [Category::class,'find']);
-            Route::get('/loadCategories', [Category::class,'loadCategories']);
-            Route::get('/read/{id}', [Category::class,'read']);
-            Route::post('/create', [Category::class,'create']);
-            Route::post('/update', [Category::class,'update']);
-            Route::get('/remove/{id}', [Category::class,'remove']);
-        });
+    Route::group(['prefix'=>'/auth'],function(){
+        Route::get('/logout', [Authentication::class,'logout']);
+    });
+    Route::group(['prefix'=>'/wellet'],function(){
+        Route::post('/find', [Wellet::class,'find']);
+        Route::get('/read/{id}', [Wellet::class,'read']);
+        Route::post('/create', [Wellet::class,'create']);
     });
 
+    Route::group(['prefix'=>'/transaction'],function(){
+        Route::post('/find', [Transaction::class,'find']);
+        Route::post('/loadTransaction', [Transaction::class,'loadTransaction']);
+        Route::post('/create', [Transaction::class,'create']);
+        Route::get('/read/{id}', [Transaction::class,'read']);
+        Route::post('/update', [Transaction::class,'update']);
+        Route::get('/remove/{id}', [Transaction::class,'remove']);
+    });
+
+    Route::group(['prefix'=>'/category'],function(){
+        Route::post('/find', [Category::class,'find']);
+        Route::get('/loadCategories', [Category::class,'loadCategories']);
+        Route::get('/read/{id}', [Category::class,'read']);
+        Route::post('/create', [Category::class,'create']);
+        Route::post('/update', [Category::class,'update']);
+        Route::get('/remove/{id}', [Category::class,'remove']);
+    });
 
 });
 

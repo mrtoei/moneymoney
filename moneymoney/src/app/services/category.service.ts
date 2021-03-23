@@ -1,49 +1,36 @@
 import { Injectable } from '@angular/core';
 import {environment} from '@env';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {BaseService} from "@cService/base.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  private hostUrl = environment.webapi;
-
-  constructor(
-      private httpClient: HttpClient
-  ) { }
-
-  headers(){
-    const httpHeaders = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
-      Authorization: `Bearer ${localStorage.getItem(environment.token)}`
-    });
-    return httpHeaders;
-  }
+  constructor(private baseService: BaseService) { }
 
   find(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/category/find`, model, {headers: this.headers()});
+    return this.baseService.post(`/category/find`, model);
   }
 
   loadCategories(): Observable<any>{
-    return this.httpClient.get(`${this.hostUrl}/category/loadCategories`, {headers: this.headers()});
+    return this.baseService.get(`/category/loadCategories`);
   }
 
   read(id:any): Observable<any>{
-    return this.httpClient.get(`${this.hostUrl}/category/read/${id}`, {headers: this.headers()});
+    return this.baseService.get(`/category/read/${id}`);
   }
 
   create(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/category/create`, model, {headers: this.headers()});
+    return this.baseService.post(`/category/create`, model);
   }
 
   update(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/category/update`, model, {headers: this.headers()});
+    return this.baseService.post(`/category/update`, model);
   }
 
   remove(id: any): Observable<any>{
-    return this.httpClient.get(`${this.hostUrl}/category/remove/${id}`, {headers: this.headers()});
+    return this.baseService.get(`/category/remove/${id}`);
   }
 
 

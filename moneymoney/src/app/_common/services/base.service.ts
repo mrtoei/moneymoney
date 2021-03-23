@@ -8,13 +8,10 @@ import {nEmpty} from '@cxFunc';
 import {environment} from "@env";
 import {Router} from "@angular/router";
 
-
-
 @Injectable()
 export class BaseService
 {
     private ROOT_API;
-
     constructor(private http: HttpClient,private router: Router)
     {
         this.ROOT_API = environment.webapi;
@@ -62,32 +59,25 @@ export class BaseService
         return this.request(path, 'POST', params, responseType);
     }
 
-    logout(): void
+    logout()
     {
-        if(this.checkToken()) {
-            let res: Observable<any> = this.request('/logout', 'GET');
+        let token = localStorage.getItem(environment.token);
+        if(token && token.length > 10) {
+            let res: Observable<any> = this.request('/auth/logout', 'GET');
             res.subscribe(result => {
-                this.clearSession();
+                localStorage.removeItem(environment.token);
+                localStorage.removeItem(environment.user);
+                window.location.href='/';
             });
         }
         else {
-            this.router.navigate(['login']);
+            window.location.href='/';
         }
-    }
-
-    private checkToken(){
-        let token = localStorage.getItem(environment.token);
-        if(token && token.length > 10) {
-            return true;
-        }
-        return false;
     }
 
     clearSession()
     {
-        localStorage.removeItem(environment.token);
-        localStorage.removeItem(environment.user);
-        this.router.navigate(['login']);
+
     }
 
     //------------------------------------------------------------------------------------------------------------------
@@ -126,22 +116,9 @@ export class BaseService
 
     private requestHelper(path: String, method: string, params?: string, files?: any, responseType?:string): Observable<any>
     {
-
-        let visitorId: string = localStorage.getItem('CUR_VISITOR_ID');
-        let token: string = localStorage.getItem('CUR_TOKEN');
-        let curMerchantID: string = sessionStorage.getItem('CUR_MERCHANT_ID');
-
         let headerOptions = {
-            'authorization': 'Bearer ' + token,
-            //'Content-type': 'application/json'
+            'authorization': `Bearer ${localStorage.getItem(environment.token)}`
         };
-        if(visitorId){
-            headerOptions['x_visitor_id'] = visitorId;
-        }
-        if(curMerchantID){
-            headerOptions['x_merchant_id'] = curMerchantID;
-        }
-
         let headers = new HttpHeaders(headerOptions);
         let url = this.ROOT_API + path;
 

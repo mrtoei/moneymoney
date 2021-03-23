@@ -1,4 +1,4 @@
-<app-header></app-header>
-<app-menu></app-menu>
+<app-header *ngIf="authService.isAuth()"></app-header>
+<app-menu *ngIf="authService.isAuth()"></app-menu>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="authService.isAuth()"></app-footer>

@@ -1,45 +1,31 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {environment} from '@env';
+import {BaseService} from "@cService/base.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransactionService {
-  private hostUrl = environment.webapi;
-
-  constructor(
-      private httpClient: HttpClient
-  ) { }
-
-  headers(){
-    const httpHeaders = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
-      Authorization: `Bearer ${localStorage.getItem(environment.token)}`
-    });
-    return httpHeaders;
-  }
-
+  constructor(private baseService: BaseService) { }
+  
   find(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/transaction/find`, model, {headers: this.headers()});
+    return this.baseService.post(`/transaction/find`, model);
   }
 
   create(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/transaction/create`, model, {headers: this.headers()});
+    return this.baseService.post(`/transaction/create`, model);
   }
 
   read(id:any): Observable<any>{
-    return this.httpClient.get(`${this.hostUrl}/transaction/read/${id}`, {headers: this.headers()});
+    return this.baseService.get(`/transaction/read/${id}`);
   }
 
   update(model: any): Observable<any>{
-    return this.httpClient.post(`${this.hostUrl}/transaction/update`, model, {headers: this.headers()});
+    return this.baseService.post(`/transaction/update`, model);
   }
 
   remove(id: any): Observable<any>{
-    return this.httpClient.get(`${this.hostUrl}/transaction/remove/${id}`, {headers: this.headers()});
+    return this.baseService.get(`/transaction/remove/${id}`);
   }
 
 }
