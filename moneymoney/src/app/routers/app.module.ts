@@ -7,9 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from '@components/app/app.component';
-import { HeaderComponent } from '@components/app/layout/header/header.component';
-import { MenuComponent } from '@components/app/layout/menu/menu.component';
-import { FooterComponent } from '@components/app/layout/footer/footer.component';
 import {CustomPipes} from "@cPipe/pipes";
 import {DashboardComponent} from "@components/dashboard/dashboard.component";
 import {LoginComponent} from "@components/login/login.component";
@@ -32,9 +29,6 @@ export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(r
   declarations: [
     AppComponent,
     LoginComponent,
-    HeaderComponent,
-    MenuComponent,
-    FooterComponent,
     DashboardComponent
   ],
   imports: [

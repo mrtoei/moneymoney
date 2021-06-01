@@ -1,17 +1,35 @@
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  .card-login{
+    width: 300px;
+    padding: 2rem 3rem;
+    border-radius: 5%;
+    color: #ffffff;
+    background-color: $blue-color;
+    box-shadow: 0 0 2px 3px $blue-color;
+    .logo{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      img{
+        width: 150px;
+      }
+    }
 
-.header{
-  padding-bottom: 3%;
+    .form-group{
+      label{
+        font-size: 0.95rem;
+      }
+    }
+  }
+
 }
 
-.container {
-  width: 400px;
-  background-color: #4590f5;
-  color: white;
-  border-radius: 30px;
 
-  img{
-
-  }
 
   .row{
     padding: 20px;
@@ -43,4 +61,4 @@
 
 
 
-}
+

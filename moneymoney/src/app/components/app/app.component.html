@@ -1,4 +1,31 @@
-<app-header *ngIf="authService.isAuth()"></app-header>
-<app-menu *ngIf="authService.isAuth()"></app-menu>
-<router-outlet></router-outlet>
-<app-footer *ngIf="authService.isAuth()"></app-footer>
+<div class="main">
+    <div class="header" *ngIf="authService.isAuth()">
+        <div class="header-logo">
+            <img src="./assets/images/accounting.png"/>
+        </div>
+        <div class="header-menu">
+            <ul>
+                <li class="active">
+                    <a [routerLink]="['dashboard']">
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['wellet']">
+                        My Wellets
+                    </a>
+                </li>
+                <li>Reports</li>
+                <li>Setting</li>
+            </ul>
+        </div>
+        <div class="header-profile">
+            <img src="assets/images/profile.jpg" class="rounded">
+            <span>Arkkarachat</span>
+        </div>
+    </div>
+    <div class="content vh100-60 bgE8E8E8">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

@@ -3,6 +3,12 @@
 *{
   font-family: 'Mulish', sans-serif;
   letter-spacing: 1.5px;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
 }
 
 @import 'app','login';
@@ -26,3 +32,6 @@
   background-color: #ff1a00;
   color: rgba(255,255,255,.87);
 }
+
+.bgE8E8E8{background-color: #e8e8e8 !important;}
+.bgFFF{background-color: #fff !important;}
