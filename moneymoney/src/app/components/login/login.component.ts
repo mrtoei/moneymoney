@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
 import {environment} from '@env';
 import {LoginModel} from "@cModel/mymodels";
 import {AuthService} from "@cService/auth.service";

@@ -5,12 +5,12 @@
         </div>
         <div class="header-menu">
             <ul>
-                <li class="active">
-                    <a [routerLink]="['dashboard']">
+                <li mactive="/dashboard">
+                    <a [routerLink]="['dashboard']" >
                         Dashboard
                     </a>
                 </li>
-                <li>
+                <li mactive="/wellet">
                     <a [routerLink]="['wellet']">
                         My Wellets
                     </a>
@@ -19,9 +19,13 @@
                 <li>Setting</li>
             </ul>
         </div>
-        <div class="header-profile">
+        <div class="header-profile d-flex" *ngIf="authService.isAuth()">
             <img src="assets/images/profile.jpg" class="rounded">
-            <span>Arkkarachat</span>
+            <div class="d-flex flex-column w100">
+                <span>Arkkarachat</span>
+                <span (click)="logout()" class="span-logout">Logout</span>
+            </div>
+
         </div>
     </div>
     <div class="content vh100-60 bgE8E8E8">

@@ -13,6 +13,7 @@ import {LoginComponent} from "@components/login/login.component";
 import {BaseService} from "@cService/base.service";
 import {AuthGuard} from "@cGuard/auth.guard";
 import {AuthService} from "@cService/auth.service";
+import {MenuActiveDirective} from "../_common/directives/mactive.directive";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
@@ -29,7 +30,8 @@ export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(r
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    MenuActiveDirective
   ],
   imports: [
     BrowserModule,
