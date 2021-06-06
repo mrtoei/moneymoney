@@ -8,6 +8,7 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {TransactionModule} from "./transation";
 import {WelletListComponent} from "../components/wellet/welletList.component";
 import {WelletFormComponent} from "../components/wellet/welletForm.component";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     imports: [
@@ -34,7 +35,8 @@ export class WelletRoutingModule
         WelletRoutingModule,
         ModalModule.forRoot(),
         BsDatepickerModule.forRoot(),
-        TransactionModule
+        TransactionModule,
+        FontAwesomeModule
     ],
     declarations: [
         WelletListComponent,

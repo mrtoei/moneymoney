@@ -4,75 +4,76 @@
         <label>Transaction</label>
         <div>
             <span (click)="show()"><i class="fas fa-plus-circle" ></i></span>
-            <span (click)="backToWelletList()"><i class="fas fa-reply"></i></span>
         </div>
     </div>
 </div>-->
-<div class="row transaction">
-    <div class="col-md-3"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <!-- transactionList -->
+        <div class="col-md-6" [ngClass]="currentPanel=='transactionList'?'':'vHide'">
+            <div class="transaction-content">
+                <div class="transaction-header">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <span>Inflow</span>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <span [ngClass]="{'iGreen': inFlow > 0}">{{numF(inFlow)}}</span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <span>outFlow</span>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-end">
+                            <span [ngClass]="{'iRed': inFlow > 0}">{{numF(outFlow)}}</span>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex justify-content-end">
+                            <span [ngClass]="{'iGreen': this.summaryTransaction > 0, 'iRed': this.summaryTransaction < 0  }">{{numF(this.summaryTransaction)}}</span>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- transactionList -->
-    <div class="col-md-6 transactionList" [ngClass]="currentPanel=='transactionList'?'':'vHide'">
-        <div class="transaction-content">
-            <div class="transaction-header">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <span>Inflow</span>
-                    </div>
-                    <div class="col-sm-6 d-flex justify-content-end">
-                        <span [ngClass]="{'iGreen': inFlow > 0}">{{numF(inFlow)}}</span>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-sm-6">
-                        <span>outFlow</span>
-                    </div>
-                    <div class="col-sm-6 d-flex justify-content-end">
-                        <span [ngClass]="{'iRed': inFlow > 0}">{{numF(outFlow)}}</span>
-                    </div>
-                </div>
-                <hr/>
-                <div class="row">
-                    <div class="col-sm-12 d-flex justify-content-end">
-                        <span [ngClass]="{'iGreen': this.summaryTransaction > 0, 'iRed': this.summaryTransaction < 0  }">{{numF(this.summaryTransaction)}}</span>
-                    </div>
-                </div>
-            </div>
-
-            <ng-container *ngIf="loading && empty(transactionList)">Loading . . .</ng-container>
-            <ng-container  *ngIf="!loading && nEmpty(transactionList)">
-                <ng-container *ngFor="let tran of transactionList">
-                    <div *ngIf="nEmpty(tran.transections)" class="transaction-list">
-                        <div class="row">
-                            <div class="col-sm-12 date-total">
-                                <div class="d-flex justify-content-between">
-                                    <label>{{dateText(tran.date)}}</label>
-                                    <div [ngClass]="{'iGreen': tran.sumDaliy > 0, 'iRed': tran.sumDaliy < 0  }">{{numF(tran.sumDaliy)}}</div>
+                <ng-container *ngIf="loading && empty(transactionList)">Loading . . .</ng-container>
+                <ng-container  *ngIf="!loading && nEmpty(transactionList)">
+                    <ng-container *ngFor="let tran of transactionList">
+                        <div *ngIf="nEmpty(tran.transections)" class="transaction-list">
+                            <div class="row">
+                                <div class="col-sm-12 date-total">
+                                    <div class="d-flex justify-content-between">
+                                        <label>{{dateText(tran.date)}}</label>
+                                        <div [ngClass]="{'iGreen': tran.sumDaliy > 0, 'iRed': tran.sumDaliy < 0  }">{{numF(tran.sumDaliy)}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div class="row mb-2 section-list" *ngFor="let tr of tran.transections" (mouseover)="focusInput=tr.id" (mouseout)="focusInput=null" >
+                                <div class="col-sm-6 transaction-category-note">
+                                    <label class="mb-0">{{tr.category.name}}</label>
+                                    <div>{{tr.note}}</div>
+                                </div>
+                                <div class="col-sm-6 d-flex justify-content-end transaction-amount" >
+                                    <label [ngClass]="{'active': focusInput==tr.id,'iGreen': intVal(tr.type) === TRANSACTION_TYPE_INCOME, 'iRed': intVal(tr.type) === TRANSACTION_TYPE_EXPENSE }">
+                                        {{intVal(tr.type) === TRANSACTION_TYPE_INCOME ? '+':'-'}}{{numF(tr.amount)}}
+                                    </label>
+                                    <div [ngClass]="{'active': focusInput==tr.id}" >
+                                        <i (click)="show(tr)" class="fas fa-pen-alt" ></i>
+                                        <i (click)="removeTransaction(tr)" class="far fa-trash-alt"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <hr/>
-                        <div class="row mb-2 section-list" *ngFor="let tr of tran.transections" (mouseover)="focusInput=tr.id" (mouseout)="focusInput=null" >
-                            <div class="col-sm-6 transaction-category-note">
-                                <label class="mb-0">{{tr.category.name}}</label>
-                                <div>{{tr.note}}</div>
-                            </div>
-                            <div class="col-sm-6 d-flex justify-content-end transaction-amount" >
-                                <label [ngClass]="{'active': focusInput==tr.id,'iGreen': intVal(tr.type) === TRANSACTION_TYPE_INCOME, 'iRed': intVal(tr.type) === TRANSACTION_TYPE_EXPENSE }">
-                                    {{intVal(tr.type) === TRANSACTION_TYPE_INCOME ? '+':'-'}}{{numF(tr.amount)}}
-                                </label>
-                                <div [ngClass]="{'active': focusInput==tr.id}" >
-                                    <i (click)="show(tr)" class="fas fa-pen-alt" ></i>
-                                    <i (click)="removeTransaction(tr)" class="far fa-trash-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </ng-container>
                 </ng-container>
-            </ng-container>
-            <ng-container *ngIf="!loading && empty(transactionList)">No Record . . .</ng-container>
+                <ng-container *ngIf="!loading && empty(transactionList)">No Record . . .</ng-container>
+            </div>
         </div>
     </div>
 </div>
+
 
 <transactionForm [ngClass]="currentPanel=='transactionForm'?'d-block':'d-none'" (back)="backToTransactionListing()" (afterSaved)="afterSaved($event)"></transactionForm>

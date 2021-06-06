@@ -1,34 +1,36 @@
 <div class="main">
-    <div class="header" *ngIf="authService.isAuth()">
-        <div class="header-logo">
-            <img src="./assets/images/accounting.png"/>
-        </div>
-        <div class="header-menu">
-            <ul>
-                <li mactive="/dashboard">
-                    <a [routerLink]="['dashboard']" >
-                        Dashboard
-                    </a>
-                </li>
-                <li mactive="/wellet">
-                    <a [routerLink]="['wellet']">
-                        My Wellets
-                    </a>
-                </li>
-                <li>Reports</li>
-                <li>Setting</li>
-            </ul>
-        </div>
-        <div class="header-profile d-flex" *ngIf="authService.isAuth()">
-            <img src="assets/images/profile.jpg" class="rounded">
-            <div class="d-flex flex-column w100">
-                <span>Arkkarachat</span>
-                <span (click)="logout()" class="span-logout">Logout</span>
+    <div class="header">
+        <ng-container *ngIf="authService.isAuth()">
+            <div class="header-logo">
+                <img src="./assets/images/accounting.png"/>
             </div>
+            <div class="header-menu">
+                <ul>
+                    <li mactive="/dashboard">
+                        <a [routerLink]="['dashboard']" >
+                            Dashboard
+                        </a>
+                    </li>
+                    <li mactive="/wellet">
+                        <a [routerLink]="['wellet']">
+                            My Wellets
+                        </a>
+                    </li>
+                    <li>Reports</li>
+                    <li>Setting</li>
+                </ul>
+            </div>
+            <div class="header-profile d-flex" *ngIf="authService.isAuth()">
+                <img src="assets/images/profile.jpg" class="rounded">
+                <div class="d-flex flex-column w100">
+                    <span>Arkkarachat</span>
+                    <span (click)="logout()" class="span-logout">Logout</span>
+                </div>
 
-        </div>
+            </div>
+        </ng-container>
     </div>
-    <div class="content vh100-60 bgE8E8E8">
+    <div class="content bgE8E8E8">
         <router-outlet></router-outlet>
     </div>
 </div>

@@ -1,19 +1,21 @@
-
-<div class="panel vh100-60">
-    <div class="panel-left border-right">
-       <!-- <div>
-            <label>My Wellets</label>
-            <span (click)="openFormModal()"><i class="fas fa-plus-circle" ></i></span>
-        </div>-->
-        <div *ngIf="!loading && searchModel.rows.length > 0">
-            <div class="mt-3 ml-3 p-2" *ngFor="let row of searchModel.rows">
-                <a (click)="showPanel('transactionList', row)">{{row.name}}</a>
-            </div>
+<div class="loading vh100-60" *ngIf="loading">
+    <div class="spinner"></div>
+</div>
+<div class="panel vh100-60" >
+    <div class="panel-left">
+        <div class="menu" *ngIf="!loading && searchModel.rows.length > 0">
+            <ul>
+                <ng-container *ngFor="let row of searchModel.rows">
+                    <li [ngClass]="currentMenu === intVal(row.id) ? 'active':''">
+                        <a (click)="showPanel('transactionList', row)">{{row.name}}</a>
+                    </li>
+                </ng-container>
+            </ul>
         </div>
     </div>
     <div class="panel-right bgFFF">
         <div [ngClass]="currentPanel=='transactionList'?'d-block':'d-none'">
-            <transactionList (back)="backToWelletList()"></transactionList>
+            <transactionList></transactionList>
         </div>
     </div>
 </div>

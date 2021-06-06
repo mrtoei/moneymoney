@@ -1,8 +1,6 @@
-$green: #2eb494;
-$blue-color: #2a68d3;
-.vh100-60{
-  height: calc(100vh - 60px) !important;
-}
+/***********************************************************************************************************************
+*  PANEL CONTROL
+***********************************************************************************************************************/
 .panel{
   width: 100%;
   display: flex;
@@ -15,286 +13,69 @@ $blue-color: #2a68d3;
   }
 }
 
-
-/*
-// Header
-.signOut{
-  cursor: pointer;
-
-  :hover {
-    color: red!important;
-  }
-}
-
-
-// Content wrapper
-.content-wrapper{
-  .content{
-    padding: 0;
-    .header{
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background: $green;
-      color: #ffffff;
-      margin-bottom: 1rem;
-      label{
-        margin-bottom: 0;
-        font-weight: bold;
-        font-size: 16px;
+/***********************************************************************************************************************
+*  MENU CONTROL
+***********************************************************************************************************************/
+.menu{
+  margin-top: 25px;
+  ul{
+    padding-left: 1rem;
+    li{
+      display: block;
+      padding: 1rem 0 1rem 2.5rem;
+      cursor: pointer;
+      list-style: none;
+      a{
+        margin-left: 2rem;
       }
-      span{
-        margin-left: 1rem;
-        cursor: pointer;
-        &:hover{
-          opacity: 0.5;
-          background: $green;
-        }
-      }
-    }
-  }
-}
-
-
-// Wallet
-.card{
-  margin-right: 1rem;
-  .card-body{
-    display: flex;
-    flex-direction: row;
-    .my-wellet-icon{
-      margin-right: 2rem;
-      img{
-        width: 80px;
-      }
-    }
-  }
-}
-
-.wellet {
-  .wellet-list{
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-
-  }
-}
-.wellet-header-detail{
-  background: $green;
-  color: #ffffff;
-  padding: 0.5rem;
-}
-.wellet-content {
-  .card{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem !important;
-  }
-}
-// Transaction
-.transaction{
-  .card{
-    .card-body{
-      .icon{
-        img{
-          width: 100px;
-        }
-      }
-    }
-  }
-
-  .transactionList{
-
-    .transaction-header, .transaction-list{
-      background-color: #ffff;
-      padding: 25px;
-      margin-bottom: 25px;
-      border: 1px solid rgba(0,0,0,.125);
-      border-radius: .25rem;
-      background-clip: border-box;
-      box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
-
-    }
-    .transaction-header{
-      hr{
-        margin-bottom: 0px;
-      }
-    }
-    .transaction-list{
-      hr{
-        margin-top: 0px;
-      }
-      .section-list{
-        margin: 0;
-        .transaction-category-note{
-          padding: 0;
-          label{
-            margin-bottom: 0;
-          }
-          div{
-            font-size: 12px;
-            color: gray;
-          }
-        }
-        .transaction-amount{
-          padding: 0;
-          label{
-            &.active{
-              padding-right: 10px;
-            }
-          }
-          div{
-            display: none;
-            padding: 0;
-            &.active{
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 0;
-              .fa-pen-alt {
-                font-size: 1.3em;
-                color: #ffffff;
-                padding: 10px 10px;
-                background-color: blue;
-                &:active{
-                  opacity: 50%;
-                }
-              }
-              .fa-trash-alt {
-                font-size: 1.3em;
-                color: #ffffff;
-                padding: 0 15px;
-                padding: 10px 10px;
-                background-color: #ff7d7d;
-                &:active{
-                  opacity: 50%;
-                }
-              }
-            }
-          }
-        }
-        &:hover{
-          cursor: pointer;
-          background-color: #f2f5f7;
-        }
-      }
-    }
-
-  }
-
-  .transactionForm{
-    .buttonGroup{
-      display: flex;
-      justify-content: flex-end;
-      .btn-save{
-        margin-right: 0.3rem;
-      }
-    }
-  }
-}
-
-// Category
-.category{
-  .div-btn-action{
-    display: flex;
-    justify-content: flex-end;
-    width: 100px;
-
-    button{
-      border-radius: 100%;
-      border: 1px solid transparent;
-      color: #797979!important;
-      background-color: #fff!important;
-      border-color: #e1e8ee!important;
-      outline: 0! important;
-      margin-right: 5px;
-      &:focus {
-        outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-      }
+      &::after, &::before{
+         content: "";
+         position: absolute;
+       }
       &:hover{
-        color: #797979!important;
-        background-color: #e1e8ee!important;
-        border-color: #e1e8ee!important;
+        background-color: #f6f6f6;
+        border-radius: 20px 0px 0px 20px;
+
       }
+      &.active{
+        color: $blue-color;
+        background-color: $white;
+        border-radius: 20px 0px 0px 20px;
+       }
     }
   }
 }
 
-*/
+/***********************************************************************************************************************
+*  LOADING CONTROL
+***********************************************************************************************************************/
+//TODO REMOVE
+.loading-s{
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spinner 2s linear infinite;
+}
 
-
-.main{
+.loading{
   display: flex;
-  flex-direction: column;
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0;
-  padding: 0;
-  .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100% !important;
-    height: 60px;
-    box-shadow: 0 -4px 7px black;
-    z-index: 1;
-    .header-logo{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80px;
-      height: 100%;
-      background-color: $blue-color;
-      img{
-        width: 50px;
-      }
-    }
-    .header-menu{
-      margin-left: 20px;
-      width: 100% !important;
-      ul{
-        display: flex;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        li{
-          list-style-type: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 130px;
-          &.active{
-            height: 60px;
-            color: $blue-color;
-            font-weight: 400;
-            border-bottom: 2px solid $blue-color;
-          }
-          a{
-            text-decoration: none;
-            color: black;
-          }
-        }
-      }
-    }
-    .header-profile{
-      width: 200px;
-      img{
-        width: 35px;
-      }
-      span{
-        font-size: 1rem;
-        margin-left: 0.5rem;
-      }
-      .span-logout{
-        font-size: 0.8rem;
-        cursor: pointer;
-      }
-    }
-  }
-  .content{
-    height: calc(100vh - 60px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #acacac;
+  .spinner{
+    border: 5px solid $white;
+    border-top: 5px solid $blue-color;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spinner 2s linear infinite;
   }
 }
 
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
