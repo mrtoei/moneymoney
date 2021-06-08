@@ -44,6 +44,10 @@ export class TransactionListComponent{
 
     loadTransaction(welletRow?: any)
     {
+        if(this.loading){
+            return;
+        }
+
         this.welletRow  = welletRow;
         this.filters = {
             wellet_id: this.welletRow.id,

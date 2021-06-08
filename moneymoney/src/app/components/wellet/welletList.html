@@ -1,8 +1,12 @@
-<div class="loading vh100-60" *ngIf="loading">
+<div class="loading vh100-60"  *ngIf="loading">
     <div class="spinner"></div>
+    <span class="spinner-text">Loading . . .</span>
 </div>
 <div class="panel vh100-60" >
     <div class="panel-left">
+        <div>
+            Add wellet
+        </div>
         <div class="menu" *ngIf="!loading && searchModel.rows.length > 0">
             <ul>
                 <ng-container *ngFor="let row of searchModel.rows">

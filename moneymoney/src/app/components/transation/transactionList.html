@@ -7,39 +7,43 @@
         </div>
     </div>
 </div>-->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <!-- transactionList -->
-        <div class="col-md-6" [ngClass]="currentPanel=='transactionList'?'':'vHide'">
-            <div class="transaction-content">
-                <div class="transaction-header">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <span>Inflow</span>
+<div class="loading vh100-60"  *ngIf="loading">
+    <div class="spinner"></div>
+    <span class="spinner-text">Loading . . .</span>
+</div>
+<ng-container *ngIf="!loading && empty(transactionList)">No Record . . .</ng-container>
+<ng-container *ngIf="!loading && nEmpty(transactionList)">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <!-- transactionList -->
+            <div class="col-md-6" [ngClass]="currentPanel=='transactionList'?'':'vHide'">
+                <div class="transaction-content">
+                    <div class="transaction-header">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <span>Inflow</span>
+                            </div>
+                            <div class="col-sm-6 d-flex justify-content-end">
+                                <span [ngClass]="{'iGreen': inFlow > 0}">{{numF(inFlow)}}</span>
+                            </div>
                         </div>
-                        <div class="col-sm-6 d-flex justify-content-end">
-                            <span [ngClass]="{'iGreen': inFlow > 0}">{{numF(inFlow)}}</span>
+                        <div class="row mb-3">
+                            <div class="col-sm-6">
+                                <span>outFlow</span>
+                            </div>
+                            <div class="col-sm-6 d-flex justify-content-end">
+                                <span [ngClass]="{'iRed': inFlow > 0}">{{numF(outFlow)}}</span>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <span [ngClass]="{'iGreen': this.summaryTransaction > 0, 'iRed': this.summaryTransaction < 0  }">{{numF(this.summaryTransaction)}}</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-sm-6">
-                            <span>outFlow</span>
-                        </div>
-                        <div class="col-sm-6 d-flex justify-content-end">
-                            <span [ngClass]="{'iRed': inFlow > 0}">{{numF(outFlow)}}</span>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="col-sm-12 d-flex justify-content-end">
-                            <span [ngClass]="{'iGreen': this.summaryTransaction > 0, 'iRed': this.summaryTransaction < 0  }">{{numF(this.summaryTransaction)}}</span>
-                        </div>
-                    </div>
-                </div>
 
-                <ng-container *ngIf="loading && empty(transactionList)">Loading . . .</ng-container>
-                <ng-container  *ngIf="!loading && nEmpty(transactionList)">
                     <ng-container *ngFor="let tran of transactionList">
                         <div *ngIf="nEmpty(tran.transections)" class="transaction-list">
                             <div class="row">
@@ -68,12 +72,12 @@
                             </div>
                         </div>
                     </ng-container>
-                </ng-container>
-                <ng-container *ngIf="!loading && empty(transactionList)">No Record . . .</ng-container>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</ng-container>
+
 
 
 <transactionForm [ngClass]="currentPanel=='transactionForm'?'d-block':'d-none'" (back)="backToTransactionListing()" (afterSaved)="afterSaved($event)"></transactionForm>

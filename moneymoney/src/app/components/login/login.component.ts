@@ -17,10 +17,15 @@ export class LoginComponent implements OnInit {
       private authService: AuthService
   ){}
 
-  ngOnInit() {
-
+  ngOnInit()
+  {
+      if(this.authService.isAuth()){
+          window.location.href='dashboard';
+      }
   }
-  onSumbit(){
+
+  onSumbit()
+  {
       this.isError = false;
       this.loading = true;
       this.authService.login(this.loginModel).subscribe(

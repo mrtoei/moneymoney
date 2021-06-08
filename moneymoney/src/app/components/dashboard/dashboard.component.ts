@@ -5,17 +5,15 @@ import {DashboardService} from "@services/dashboard.service";
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html'
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit
+{
 
-  filter: any =  {};
-  count: number = 1;
-
-  @ViewChild('divChart') divChart:ElementRef;
   constructor(
       public componentService: DashboardService,
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit()
+  {
 
   }
 }
