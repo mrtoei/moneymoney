@@ -8,15 +8,18 @@ import {BaseService} from "@cService/base.service";
 export class WalletService {
   constructor(private baseService: BaseService) { }
 
-  find(searchModel: any): Observable<any>{
-    return this.baseService.post(`/wallet/find`, searchModel);
+  listing(searchModel: any): Observable<any>
+  {
+    return this.baseService.post(`/wallet/listing`, searchModel);
   }
 
-  create(model: any): Observable<any>{
+  create(model: any): Observable<any>
+  {
     return this.baseService.post(`/wallet/create`, model);
   }
 
-  read(id:any): Observable<any>{
+  read(id:any): Observable<any>
+  {
     return this.baseService.get(`/wallet/read/${id}`);
   }
 

@@ -14,7 +14,6 @@ export class WalletListComponent implements OnInit
   intVal = intVal;
 
   loading:boolean = false;
-  submitting: boolean = false;
 
   filters:any = {};
   walletList:Array<any> = [];
@@ -31,14 +30,26 @@ export class WalletListComponent implements OnInit
   public transactionList: TransactionListComponent;
 
   constructor(
-      public componentService: WalletService,
-      private cdr : ChangeDetectorRef
-  ) {
-  }
+      private walletService: WalletService)
+  {}
 
   ngOnInit(): void
   {
     this.filters = {};
+    this.loadWalletList()
+  }
+
+  loadWalletList(action?: any)
+  {
+    this.loading = true;
+    this.walletService.listing(this.filters).subscribe(result => {
+          this.loading = false;
+          if (result.success){
+            this.walletList = result.data;
+
+          }
+        }
+    );
   }
 
   showPanel(panelCode: string, row?: any){
@@ -64,7 +75,8 @@ export class WalletListComponent implements OnInit
     if(nEmpty(data)) {
       if (data.action === 'create') {
         this.walletList.push(data.row);
-      } else {
+      }
+      else {
         let found = false;
         for (let i = 0; i < this.walletList.length; i++) {
           if (data.row.id === this.walletList[i].id) {

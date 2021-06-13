@@ -31,7 +31,7 @@ Route::group(['middleware' => 'auth:api'],function(){
         Route::get('/logout', [Authentication::class,'logout']);
     });
     Route::group(['prefix'=>'/wallet'],function(){
-        Route::post('/find', [Wallet::class,'find']);
+        Route::post('/listing', [Wallet::class,'listing']);
         Route::get('/read/{id}', [Wallet::class,'read']);
         Route::post('/create', [Wallet::class,'create']);
     });

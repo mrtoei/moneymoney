@@ -11,14 +11,14 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-row">
-                        <div class="col-md-3 form-group" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
-                            <label>Type <span>*</span></label>
-                            <select #type="ngModel" [(ngModel)]="row.type" name="type" class="form-control" id="exampleFormControlSelect1" required>
+                        <div class="col-md-6 form-group" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
+                            <label for="selectWalletType">Type <span class="iRed">*</span></label>
+                            <select #type="ngModel" [(ngModel)]="row.type" name="type" class="form-control" id="selectWalletType" required>
                                 <option *ngFor="let wellet of walletType" [value]="wellet.code">{{wellet.name}}</option>
                             </select>
                         </div>
-                        <div class="col-md-9 form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
-                            <label>Name <span>*</span></label>
+                        <div class="col-md-6 form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
+                            <label>Name <span class="iRed">*</span></label>
                             <input #name="ngModel" [(ngModel)]="row.name" name="name" type="text" class="form-control" minlength="2" maxlength="200" required>
                         </div>
                     </div>
@@ -29,8 +29,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" (click)="cancel()" class="btn">Close</button>
-                    <button type="button" (click)="save()" [disabled]="!popupForm.valid" class="btn btn-primary">Save</button>
+                    <button type="button" (click)="cancel()" class="btn btn-cancel">Close</button>
+                    <button type="button" (click)="save()" [disabled]="!popupForm.valid || submitting" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </form>

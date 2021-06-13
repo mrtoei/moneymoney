@@ -8,11 +8,15 @@ export abstract class BaseFormModalComponent implements OnInit
 {
     public componentService: any;
 
+    loading: boolean = false;
+    submitting: boolean = false;
     row: any = {};
 
-    @ViewChild('popupForm', {static: false}) popupForm: NgForm;
+    @ViewChild('popupForm', {static: false})
+    popupForm: NgForm;
 
-    @ViewChild('formModal', {static: false}) formModal: ModalDirective;
+    @ViewChild('formModal', {static: false})
+    formModal: ModalDirective;
 
     @Output('afterSaved')
     afterSaved = new EventEmitter();
@@ -70,12 +74,27 @@ export abstract class BaseFormModalComponent implements OnInit
 
     loadRow(rowId: any)
     {
+        if(this.loading || this.submitting){
+            return;
+        }
+
+        this.loading = true;
         this.componentService.read(rowId).subscribe(result => {
+            this.loading = false;
             if(result.success){
                 this.row = result.data;
+                this.afterLoadRow();
                 this.formModal.show();
             }
+            else{
+                this.formModal.hide();
+            }
         });
+    }
+
+    afterLoadRow()
+    {
+        //developer anc override if required.
     }
 
     cancel(){

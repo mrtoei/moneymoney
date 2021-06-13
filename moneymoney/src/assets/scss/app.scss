@@ -98,16 +98,17 @@
     color: #2a68d3;
     display: flex;
     align-items: center;
-    padding: 1px 5px;
+    padding: 1px 1px;
     border-radius: 100px;
     fa-icon{
       margin-left: 0.2rem;
-      font-size: 1.3rem;
+      font-size: 0.8rem;
     }
     span{
       margin-left: 0.5rem;
       margin-right: 0.5rem;
       font-weight: bold;
+      font-size: 0.8rem;
     }
     &:hover{
       cursor: pointer;
@@ -132,6 +133,18 @@
     border-top-right-radius: calc(20px - 3px) !important;
   }
   .modal-footer{
+    .btn-cancel{
+      color: #acacac;
+      border-radius: 100px;
+
+      &:hover{
+        color: $white;
+        background-color: #acacac;
+      }
+      &:focus{
+        box-shadow: 0 0 0 0.2rem rgb(171 182 194 / 25%);
+      }
+    }
     .btn-primary{
       background-color: unset;
       border-radius: 100px;
