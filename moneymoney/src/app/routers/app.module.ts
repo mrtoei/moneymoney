@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login'},
   { path: 'login' , component: LoginComponent },
   { canActivate: [AuthGuard], path: 'dashboard' , component: DashboardComponent },
-  { canActivate: [AuthGuard], path: 'wellet' , loadChildren:()=>import('@routers/wellet').then(m => m.WelletModule) },
+  { canActivate: [AuthGuard], path: 'wallet' , loadChildren:()=>import('@routers/wallet').then(m => m.WalletModule) },
   { canActivate: [AuthGuard], path: 'transaction' , loadChildren:()=>import('@routers/transation').then(m => m.TransactionModule) },
   { canActivate: [AuthGuard], path: 'setting/categories' , loadChildren:()=>import('@routers/category').then(m => m.CategoryModule)},
   // { path: '**', redirectTo: 'login'}

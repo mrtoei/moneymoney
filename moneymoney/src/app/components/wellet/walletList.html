@@ -4,12 +4,15 @@
 </div>
 <div class="panel vh100-60" >
     <div class="panel-left">
-        <div>
-            Add wellet
+        <div class="wellet">
+            <div (click)="openFormModal()">
+                <fa-icon [icon]="faPlusCircle"></fa-icon>
+                <span>WALLET</span>
+            </div>
         </div>
-        <div class="menu" *ngIf="!loading && searchModel.rows.length > 0">
+        <div class="menu" *ngIf="!loading && walletList.length > 0">
             <ul>
-                <ng-container *ngFor="let row of searchModel.rows">
+                <ng-container *ngFor="let row of walletList">
                     <li [ngClass]="currentMenu === intVal(row.id) ? 'active':''">
                         <a (click)="showPanel('transactionList', row)">{{row.name}}</a>
                     </li>
@@ -24,5 +27,5 @@
     </div>
 </div>
 
-<app-wellet-form #rowForm="formModalEX" (afterSaved)="afterModalSaved($event)"></app-wellet-form>
+<app-wallet-form #walletFormModalCom="walletFormModalEX" (afterSaved)="afterWalletModalSaved($event)"></app-wallet-form>
 

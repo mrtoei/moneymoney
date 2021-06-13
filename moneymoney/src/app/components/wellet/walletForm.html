@@ -10,17 +10,26 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
-                        <label>Name <span>*</span></label>
-                        <input #name="ngModel" [(ngModel)]="row.name" name="name" type="text" class="form-control" minlength="2" maxlength="200" required="">
+                    <div class="form-row">
+                        <div class="col-md-3 form-group" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
+                            <label>Type <span>*</span></label>
+                            <select #type="ngModel" [(ngModel)]="row.type" name="type" class="form-control" id="exampleFormControlSelect1" required>
+                                <option *ngFor="let wellet of walletType" [value]="wellet.code">{{wellet.name}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-9 form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
+                            <label>Name <span>*</span></label>
+                            <input #name="ngModel" [(ngModel)]="row.name" name="name" type="text" class="form-control" minlength="2" maxlength="200" required>
+                        </div>
                     </div>
+
                     <div class="form-group">
                         <label>Description</label>
                         <textarea  [(ngModel)]="row.description" name="description" class="form-control" rows="3"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" (click)="cancel()" class="btn btn-secondary">Close</button>
+                    <button type="button" (click)="cancel()" class="btn">Close</button>
                     <button type="button" (click)="save()" [disabled]="!popupForm.valid" class="btn btn-primary">Save</button>
                 </div>
             </div>

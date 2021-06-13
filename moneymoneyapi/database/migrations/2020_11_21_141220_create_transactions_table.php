@@ -23,7 +23,7 @@ class CreateTransactionsTable extends Migration
             $table->decimal('amount',10,2);
             $table->dateTime('date');
             $table->string('photo',45)->nullable(true);
-            $table->tinyInteger('status',1)->default(0);
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
 
             $table->foreign('wellet_id')->references('id')->on('my_wellet');

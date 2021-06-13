@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Category;
 use App\Http\Controllers\Transaction;
-use App\Http\Controllers\Wellet;
+use App\Http\Controllers\Wallet;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Authentication;
 /*
@@ -30,10 +30,10 @@ Route::group(['middleware' => 'auth:api'],function(){
     Route::group(['prefix'=>'/auth'],function(){
         Route::get('/logout', [Authentication::class,'logout']);
     });
-    Route::group(['prefix'=>'/wellet'],function(){
-        Route::post('/find', [Wellet::class,'find']);
-        Route::get('/read/{id}', [Wellet::class,'read']);
-        Route::post('/create', [Wellet::class,'create']);
+    Route::group(['prefix'=>'/wallet'],function(){
+        Route::post('/find', [Wallet::class,'find']);
+        Route::get('/read/{id}', [Wallet::class,'read']);
+        Route::post('/create', [Wallet::class,'create']);
     });
 
     Route::group(['prefix'=>'/transaction'],function(){

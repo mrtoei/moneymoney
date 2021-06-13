@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category as categoryModel;
 use App\Models\Transaction as transactionModel;
-use App\Models\Wellet as welletModel;
+use App\Models\Wallet as welletModel;
 
 use \stdClass;
 
