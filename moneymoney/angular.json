@@ -30,7 +30,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "src/assets/scss/main.scss"
+              "src/assets/scss/main.scss",
+              "src/assets/font/mulish/font.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
