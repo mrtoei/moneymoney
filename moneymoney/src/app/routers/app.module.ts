@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from '@components/app/app.component';
 import {CustomPipes} from "@cPipe/pipes";
 import {DashboardComponent} from "@components/dashboard/dashboard.component";
@@ -37,7 +35,6 @@ export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(r
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    FontAwesomeModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     CustomPipes

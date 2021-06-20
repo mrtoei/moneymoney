@@ -33,7 +33,7 @@ class Transaction extends BaseController
 
     private function findByWelletDate($model)
     {
-        $welletId = $model->wellet_id;
+        $walletId = $model->wallet_id;
         $currentMonth =  date('Ym', strtotime($model->month_year));
 
         $dateRows = $this->defaultMonthRows($currentMonth);
@@ -42,14 +42,14 @@ class Transaction extends BaseController
             $transections = $this->transaction::where([
                 ['date',$dateRow],
                 ['month',$currentMonth],
-                ['wellet_id', $welletId],
+                ['wallet_id', $walletId],
                 ['status', 0]
             ])->orderBy('created_at', 'desc')->get();
 
             if(!empty($transections)){
                 foreach ($transections as $transection){
                     $transection->category = $this->category::find($transection->cat_id);
-                    $transection->wellet =  $this->wellet::find($transection->wellet_id);
+                    $transection->wallet =  $this->wellet::find($transection->wallet_id);
                 }
 
                 $rows = new stdClass();

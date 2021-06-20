@@ -6,7 +6,6 @@ import {NgModel, FormsModule} from '@angular/forms';
 import {ModalModule} from "ngx-bootstrap/modal";
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {TransactionModule} from "./transation";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {WalletListComponent} from "../components/wellet/walletList.component";
 import {WalletFormModalCom} from "../components/wellet/walletForm.component";
 
@@ -35,8 +34,7 @@ export class WalletRoutingModule
         WalletRoutingModule,
         ModalModule.forRoot(),
         BsDatepickerModule.forRoot(),
-        TransactionModule,
-        FontAwesomeModule
+        TransactionModule
     ],
     declarations: [
         WalletListComponent,

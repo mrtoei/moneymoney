@@ -3,7 +3,6 @@ import {WalletFormModalCom} from './walletForm.component';
 import {TransactionListComponent} from "../transation/transactionList.component";
 import {WalletService} from "@services/wallet.service";
 import {intVal, nEmpty} from "../../_common/util/xfunction";
-import {faPlusCircle} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-wallet-list',
@@ -16,9 +15,6 @@ export class WalletListComponent implements OnInit
   loading:boolean = false;
 
   filters:any = {};
-  walletList:Array<any> = [];
-
-  faPlusCircle = faPlusCircle;
 
   currentPanel:string = '';
   currentMenu:string = '';

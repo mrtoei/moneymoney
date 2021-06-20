@@ -22,7 +22,7 @@ export class TransactionListComponent{
     TRANSACTION_TYPE_INCOME = TRANSACTION_TYPE_INCOME;
 
     filters: any = {};
-    welletRow: any;
+    walletRow: any;
     transactionList: any = [];
     inFlow: number = 0;
     outFlow: number = 0;
@@ -42,15 +42,15 @@ export class TransactionListComponent{
         private cdr : ChangeDetectorRef
     ) { }
 
-    loadTransaction(welletRow?: any)
+    loadTransaction(walletRow?: any)
     {
         if(this.loading){
             return;
         }
 
-        this.welletRow  = welletRow;
+        this.walletRow  = walletRow;
         this.filters = {
-            wellet_id: this.welletRow.id,
+            wallet_id: this.walletRow.id,
             month_year: toUtcDate(new Date())
         };
 
@@ -96,9 +96,9 @@ export class TransactionListComponent{
     {
         this.currentPanel = 'transactionForm';
         if (row && intVal(row.id) > 0){
-            this.rowForm.show(this.welletRow, row.id);
+            this.rowForm.show(this.walletRow, row.id);
         }else{
-            this.rowForm.show(this.welletRow)
+            this.rowForm.show(this.walletRow)
         }
         this.cdr.detectChanges();
     }
@@ -195,11 +195,6 @@ export class TransactionListComponent{
 
         this.cdr.detectChanges();
         this.currentPanel='transactionList';
-    }
-
-    backToWelletList()
-    {
-        this.backToListing.emit();
     }
 
     backToTransactionListing()
