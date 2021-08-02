@@ -15,6 +15,7 @@ export class WalletListComponent implements OnInit
   loading:boolean = false;
 
   filters:any = {};
+  walletList:Array<any> = [];
 
   currentPanel:string = '';
   currentMenu:string = '';
@@ -42,7 +43,6 @@ export class WalletListComponent implements OnInit
           this.loading = false;
           if (result.success){
             this.walletList = result.data;
-
           }
         }
     );

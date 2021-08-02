@@ -9,6 +9,6 @@ class Wallet extends BaseModal
     use HasFactory;
     protected $table='my_wallet';
     protected $fillable = [
-        'id', 'user_id', 'type', 'name', 'description'
+        'id', 'user_id', 'type', 'name', 'description', 'status'
     ];
 }

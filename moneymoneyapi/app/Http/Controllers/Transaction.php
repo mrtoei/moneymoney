@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category as categoryModel;
 use App\Models\Transaction as transactionModel;
-use App\Models\Wallet as welletModel;
+use App\Models\Wallet as walletModel;
 
 use \stdClass;
 
@@ -13,25 +13,25 @@ class Transaction extends BaseController
 {
     protected $category;
     protected $transaction;
-    protected $wellet;
+    protected $wallet;
 
     public function __construct()
     {
         $this->category = new categoryModel();
         $this->transaction = new transactionModel();
-        $this->wellet = new welletModel();
+        $this->wallet = new walletModel();
     }
 
     public function find(Request $request)
     {
         $model = (object)$request->json()->all();
 
-        $transectionRows = $this->findByWelletDate($model);
+        $transectionRows = $this->findByWalletDate($model);
         return $this->success($transectionRows);
 
     }
 
-    private function findByWelletDate($model)
+    private function findByWalletDate($model)
     {
         $walletId = $model->wallet_id;
         $currentMonth =  date('Ym', strtotime($model->month_year));
@@ -76,7 +76,7 @@ class Transaction extends BaseController
 
     public function create(Request $request)
     {
-        $this->transaction->wellet_id = $request->json('wellet_id');
+        $this->transaction->wallet_id = $request->json('wallet_id');
         $this->transaction->cat_id = $request->json('cat_id');
         $this->transaction->note = $request->json('note');
         $this->transaction->description = $request->json('description');

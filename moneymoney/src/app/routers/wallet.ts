@@ -42,6 +42,9 @@ export class WalletRoutingModule
     ],
     providers: [
         NgModel
+    ],
+    exports:[
+        WalletFormModalCom
     ]
 })
 

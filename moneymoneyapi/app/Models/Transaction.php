@@ -9,7 +9,7 @@ class Transaction extends BaseModal
     use HasFactory;
     protected $table='transactions';
     protected $fillable = [
-        'id',  'wellet_id','cat_id', 'note', 'description', 'type', 'amount', 'photo','status'
+        'id',  'wallet_id','cat_id', 'note', 'description', 'type', 'amount', 'photo','status'
     ];
 
     protected $casts = [

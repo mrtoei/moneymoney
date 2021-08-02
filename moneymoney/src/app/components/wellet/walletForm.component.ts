@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { BaseFormModalComponent } from '@cComponents/base-form-modal.component';
 import {WalletService} from "@services/wallet.service";
 import {WalletType} from "../../_common/util/xconstant";
@@ -11,6 +11,9 @@ import {WalletType} from "../../_common/util/xconstant";
 export class WalletFormModalCom extends BaseFormModalComponent
 {
   walletType = WalletType;
+
+  @Input()
+  ngClass: string;
 
   constructor(public componentService: WalletService)
   {

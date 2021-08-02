@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  webapi: 'http://localhost/api',
+  webapi: 'http://localhost:1000/api',
   token: 'token',
   user: 'user',
   baseUrl: ''

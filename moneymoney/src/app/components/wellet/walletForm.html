@@ -5,26 +5,24 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">My Wellet</h5>
-                    <button type="button" class="close" (click)="cancel()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" (click)="cancel()"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-row">
-                        <div class="col-md-6 form-group" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
-                            <label for="selectWalletType">Type <span class="iRed">*</span></label>
-                            <select #type="ngModel" [(ngModel)]="row.type" name="type" class="form-control" id="selectWalletType" required>
+                    <div class="row g-3 mb-3 p-0">
+                        <div class="col-md-6" [ngClass]="{'has-error' : !type.valid && !type.pristine}">
+                            <label for="selectWalletType" class="form-label">Type <span class="iRed">*</span></label>
+                            <select #type="ngModel" [(ngModel)]="row.type" name="type" class="form-select" id="selectWalletType" required>
                                 <option *ngFor="let wellet of walletType" [value]="wellet.code">{{wellet.name}}</option>
                             </select>
                         </div>
-                        <div class="col-md-6 form-group" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
-                            <label>Name <span class="iRed">*</span></label>
+                        <div class="col-md-6" [ngClass]="{'has-error' : !name.valid && !name.pristine}">
+                            <label class="form-label">Name <span class="iRed">*</span></label>
                             <input #name="ngModel" [(ngModel)]="row.name" name="name" type="text" class="form-control" minlength="2" maxlength="200" required>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>Description</label>
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
                         <textarea  [(ngModel)]="row.description" name="description" class="form-control" rows="3"></textarea>
                     </div>
                 </div>
