@@ -10,18 +10,16 @@
                 <span>WALLET</span>
             </div>
         </div>
-        <div class="menu" *ngIf="!loading && walletList.length > 0">
+        <div class="menu"  *ngIf="!loading && walletList.length > 0">
             <ul>
-                <ng-container *ngFor="let row of walletList">
-                    <li [ngClass]="currentMenu === intVal(row.id) ? 'active':''">
-                        <a (click)="showPanel('transactionList', row)">{{row.name}}</a>
-                    </li>
-                </ng-container>
+                <li *ngFor="let row of walletList" [ngClass]="currentMenu === intVal(row.id) ? 'active':''" (click)="showPanel('transactionList', row)">
+                    <a>{{row.name}}</a>
+                </li>
             </ul>
         </div>
     </div>
     <div class="panel-right bgFFF">
-        <div [ngClass]="currentPanel=='transactionList'?'d-block':'d-none'">
+        <div [ngClass]="currentPanel==='transactionList'?'d-block':'d-none'">
             <transactionList></transactionList>
         </div>
     </div>

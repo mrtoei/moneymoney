@@ -26,11 +26,11 @@ export class WalletListComponent implements OnInit
   @ViewChild(TransactionListComponent)
   public transactionList: TransactionListComponent;
 
-  constructor(
-      private walletService: WalletService)
-  {}
+  constructor(private walletService: WalletService)
+  {
+  }
 
-  ngOnInit(): void
+  ngOnInit()
   {
     this.filters = {};
     this.loadWalletList()
